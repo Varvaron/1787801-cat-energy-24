@@ -2,17 +2,20 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
   <title>HTML Academy: Кэт энерджи. Каталог продукции</title>
 </head>
 <body class="page__body">
   <header class="header">
-    <a class="header__logo" href="index.html">
-      <img src="img/mobile/logo-mobile.png" width="33" height="38" alt="Логотип магазина спортивного питания для кошек.">
-      <img src="img/mobile/logo.png" width="101" height="18" alt="Cat Energy.">
-    </a>
-    <nav class="main-nav">
+    <div class="header__wrapper">
+      <a class="header__logo" href="index.html">
+        <img src="img/mobile/logo-mobile.png" width="33" height="38" alt="Логотип магазина спортивного питания для кошек.">
+        <img src="img/mobile/logo.png" width="101" height="18" alt="Cat Energy.">
+      </a>
       <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+    </div>
+    <nav class="main-nav">
       <div class="main-nav__wrapper">
         <ul class="main-nav__list">
           <li class="main-nav__item">
@@ -28,7 +31,7 @@
       </div>
     </nav>
   </header>
-  <main class="page-main">
+  <main class="page__main">
     <section class="catalog">
       <h1 class="catalog-title">Каталог продукции</h1>
         <article class="catalog__card card">
@@ -195,7 +198,7 @@
         <div class="catalog__show-all">
           <h2 class="catalog__show-all-title">Показать еще 100500 товаров</h2>
           <p class="catalog__show-all-text">На самом деле вкусов гораздо больше</p>
-          <button class="catalog__show-all-button button">Показать все</button>
+          <button class="catalog__show-all-button">Показать все</button>
         </div>
     </section>
     <section class="extra">
@@ -228,8 +231,10 @@
       </ul>
     </section>
     <section class="special-offer">
+      <div class="special-offer__wrapper">
       <h2 class="visually-hidden">Специальное предложение</h2>
       <p class="special-offer__text">Закажите все и получите чехол для кота в подарок!</p>
+    </div>
     </section>
     <section class="contacts">
       <div class="contacts__wrapper">

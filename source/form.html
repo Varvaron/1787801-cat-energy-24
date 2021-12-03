@@ -2,17 +2,20 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
   <title>HTML Academy: Кэт энерджи. Подбор программы</title>
 </head>
 <body class="page__body">
   <header class="header">
-    <a class="header__logo" href="index.html">
-      <img src="img/mobile/logo-mobile.png" width="33" height="38" alt="Логотип магазина спортивного питания для кошек.">
-      <img src="img/mobile/logo.png" width="101" height="18" alt="Cat Energy.">
-    </a>
-    <nav class="main-nav">
+    <div class="header__wrapper">
+      <a class="header__logo" href="index.html">
+        <img src="img/mobile/logo-mobile.png" width="33" height="38" alt="Логотип магазина спортивного питания для кошек.">
+        <img src="img/mobile/logo.png" width="101" height="18" alt="Cat Energy.">
+      </a>
       <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+    </div>
+    <nav class="main-nav">
       <div class="main-nav__wrapper">
         <ul class="main-nav__list">
           <li class="main-nav__item">
@@ -28,12 +31,12 @@
       </div>
     </nav>
   </header>
-  <main class="page-main">
+  <main class="page__main">
     <section class="form">
       <h1 class="form-title">Подбор программы</h1>
       <p class="form-text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
       <form class="ad-form" action="https://echo.htmlacademy.ru" method="post">
-        <fieldset class="ad-form__cat">
+        <fieldset class="ad-form__fieldset ad-form__cat">
           <label class="ad-form__label" for="cat-name">Имя*</label>
           <input class="ad-form__input" id="cat-name" name="cat-name" type="text" placeholder="Барсик">
           <label class="ad-form__label" for="cat-weight">Вес(кг)*</label>
@@ -41,7 +44,7 @@
           <label class="ad-form__label" for="cat-age">Возраст (лет)</label>
           <input class="ad-form__input" id="cat-age" name="cat-age" type="text" placeholder="7">
         </fieldset>
-        <fieldset class="ad-form__program">
+        <fieldset class="ad-form__fieldset ad-form__program">
           <input class="ad-form__radio" id="lost-weight" name="program" type="radio" value="lost-weight" checked>
           <label for="lost-weight">Похудение</label>
           <input class="ad-form__radio"  id="gain-weight" name="program" type="radio" value="gain-weight">
@@ -49,18 +52,18 @@
           <input class="ad-form__radio"  id="need-advice" name="program" type="radio" value="need-advice">
           <label for="need-advice">Не знаю (нужен ваш совет)</label>
         </fieldset>
-        <fieldset class="ad-form__contacts">
+        <fieldset class="ad-form__fieldset ad-form__contacts">
           <legend class="ad-form__legend">Контактные данные (владельца кота)</legend>
           <label class="ad-form__label" for="email">E-mail*</label>
           <input class="ad-form__input" id="email" name="email" type="email" placeholder="kuklachev@gmail.com">
           <label class="ad-form__label" for="tel">Телефон*</label>
           <input class="ad-form__input" id="tel" name="tel" type="tel" placeholder="8 (960) 900-60-90">
         </fieldset>
-        <fieldset class="ad-form__comment">
+        <fieldset class="ad-form__fieldset ad-form__comment">
           <legend class="ad-form__legend">Комментарий</legend>
           <textarea class="ad-form__textarea" name="comment" id="comment" cols="30" rows="10">Расскажите обо всех повадках кота</textarea>
         </fieldset>
-        <fieldset class="ad-form__extra">
+        <fieldset class="ad-form__fieldset ad-form__extra">
           <legend class="ad-form__legend">Дополнительно</legend>
           <input class="ad-form__checkbox" type="checkbox" name="sweetener" id="sweetener" checked>
           <label for="sweetener">Сахарозаменитель</label>
