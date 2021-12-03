@@ -2,16 +2,20 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Кэт энерджи</title>
   </head>
   <body class="page__body">
     <header class="header">
-      <a class="header__logo" href="index.html">
-        <img src="img/mobile/logo-mobile.png" width="33" height="38" alt="Логотип магазина спортивного питания для кошек.">
-        <img src="img/mobile/logo.png" width="101" height="18" alt="Cat Energy.">
-      </a>
+      <div class="header__wrapper">
+        <a class="header__logo" href="index.html">
+          <img src="img/mobile/logo-mobile.png" width="33" height="38" alt="Логотип магазина спортивного питания для кошек.">
+          <img src="img/mobile/logo.png" width="101" height="18" alt="Cat Energy.">
+        </a>
+        <button class="header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      </div>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
             <li class="main-nav__item">
@@ -27,11 +31,11 @@
         </div>
       </nav>
     </header>
-    <main class="page-main">
+    <main class="page__main">
       <section class="promo">
         <div class="promo__wrapper">
           <h1 class="promo__title">Функциональное питание для котов</h1>
-          <p class="promo__text"></p>
+          <p class="promo__text">Занялся собой? Займись котом!</p>
           <img src="img/mobile/index-can-mobile-1.png" width="280" height="270" alt="Банка кошачьего питания с курицей.">
           <a class="promo__button button" href="form.html">Подобрать программу</a>
         </div>
@@ -80,9 +84,9 @@
           <div class="example__slider slider">
             <img class="slider__img" src="img/mobile/before-mobile.png" width="280" height="232" alt="Кот Борис до похудения.">
             <form action="/" class="slider__form">
-              <label for="slider__switch">Было</label>
+              <label class="slider__form-label" for="slider__switch">Было</label>
               <input class="slider__switch" type="checkbox" name="slider__switch" id="slider__switch" role="switch">
-              <label for="slider__switch">Стало</label>
+              <label class="slider__form-label" for="slider__switch">Стало</label>
             </form>
           </div>
         </div>
