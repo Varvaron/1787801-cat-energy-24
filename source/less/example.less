@@ -1,12 +1,18 @@
 .example {
   background-color: @light-gray;
   margin: 0;
-  padding: 25px 20px 40px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .example__title {
   font-size: 36px;
   line-height: 40px;
+  font-weight: 400;
+  margin: 0;
 }
 
 .example__text {
@@ -23,4 +29,41 @@
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .example {
+    background: linear-gradient(to bottom, @basic-white 70%, @light-gray 70%);
+    padding: 0 30px;
+  }
+
+  .example__title {
+    font-size: 60px;
+    line-height: 60px;
+    padding-left: 30px;
+  }
+
+  .example__text {
+    font-size: 16px;
+    line-height: 24px;
+    padding-left: 30px;
+  }
+
+  .example__result {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example {
+    flex-direction: row;
+    justify-content: space-between;
+    background: linear-gradient(to bottom, @basic-white 25%, @light-gray 25%);
+    padding: 0 110px;
+  }
+
+  .example__wrapper-text {
+    width: 440px;
+  }
 }

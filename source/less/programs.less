@@ -1,18 +1,31 @@
+.programs {
+  margin: 0 20px 20px;
+}
+
 .programs__list {
-  margin: 0 20px;
   padding: 0;
+  margin: 0;
   list-style: none;
 }
 
 .programs__item {
   background-color: @light-gray;
+  margin-bottom: 20px;
+  min-width: 280px;
+  height: 266px;
+}
+
+.programs__item:last-child {
+  margin-bottom: 0;
 }
 
 .programs__title {
   font-size: 24px;
   line-height: 37px;
+  font-weight: 400;
   text-transform: uppercase;
   color: @basic-black;
+  margin: 0;
 }
 
 .programs__text {
@@ -30,4 +43,53 @@
   text-transform: uppercase;
   color: @basic-black;
   text-decoration: none;
+}
+
+@media (min-width: @tablet-width) {
+  .programs {
+    margin: 0 30px;
+  }
+
+  .programs__item {
+    margin-bottom: 30px;
+    min-width: 708px;
+    height: 372px;
+  }
+
+  .programs__title {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .programs__text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .programs__link {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .programs {
+    margin: 0 110px;
+  }
+
+  .programs__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .programs__item {
+    min-width: 500px;
+    max-width: 570px;
+    height: 374px;
+  }
+
+  .programs__item:not(:last-child) {
+    margin-right: 80px;
+  }
 }

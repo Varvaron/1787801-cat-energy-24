@@ -1,17 +1,24 @@
 .promo {
   background: linear-gradient(to bottom, @extra-green 63%, @basic-white 63%), url("/img/mobile/promo-mobile.jpg") no-repeat;
   background-position: center top;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .promo__wrapper {
-  margin: 0 20px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .promo__title {
   font-size: 36px;
   line-height: 36px;
+  font-weight: 400;
   color: @basic-white;
+  margin: 0;
+  text-align: center;
 }
 
 .promo__text {
@@ -19,4 +26,59 @@
   line-height: 14px;
   color: @basic-white;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .promo {
+    background: none;
+  }
+
+  .promo__wrapper {
+    padding: 0 87px;
+    position: relative;
+  }
+
+  .promo__title {
+    font-size: 60px;
+    line-height: 60px;
+    color: @basic-black;
+    text-align: left;
+    width: 415px;
+    align-self: flex-start;
+  }
+
+  .promo__text {
+    font-size: 20px;
+    line-height: 20px;
+    color: @basic-black;
+    text-align: left;
+    align-self: flex-start;
+  }
+
+  .promo__button {
+    position: absolute;
+    top: 230px;
+    left: 87px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo {
+    position: relative;
+    padding-bottom: 136px;
+    min-width: 550px;
+  }
+
+  .promo::before {
+    position: absolute;
+    top: -161px;
+    right: 0;
+    content: "";
+    width: 720px;
+    height: 694px;
+    z-index: -5;
+    background: linear-gradient(to right, @extra-green 0%, @extra-green 0%), url("/img/desktop/promo-desktop.jpg") no-repeat;
+    background-size: cover;
+    background-position: left top;
+  }
 }
