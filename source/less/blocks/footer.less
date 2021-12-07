@@ -1,0 +1,23 @@
+.footer {
+  background-color: @light-gray;
+  margin: 0;
+  padding: 39px 30px 22px;
+}
+
+.footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@media (min-width: @tablet-width) {
+  .footer {
+    min-height: 150px;
+  }
+
+  .footer__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
