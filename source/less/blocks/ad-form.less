@@ -2,11 +2,29 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, auto);
 }
 
 .ad-form__fieldset {
   border: none;
   padding: 0;
+}
+
+.ad-form__cat {
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.ad-form__program {
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.ad-form__extra {
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
 }
 
 .ad-form__label {
@@ -26,3 +44,50 @@
 .ad-form__textarea {
   color: @extra-dark-gray;
 }
+
+@media (min-width: @tablet-width) {
+  .ad-form {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .ad-form__legend {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .ad-form__extra {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .ad-form {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+  }
+
+  .ad-form__cat {
+    grid-column: 1 / 2;
+  }
+
+  .ad-form__program {
+    grid-column: 2 / -1;
+  }
+
+  .ad-form__contacts {
+    grid-column: 1 / -1;
+  }
+
+  .ad-form__comment {
+    grid-column: 1 / -1;
+  }
+
+  .ad-form__extra {
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+

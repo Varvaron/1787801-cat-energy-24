@@ -1,3 +1,7 @@
+.card {
+  min-width: 280px;
+}
+
 .card a {
   text-decoration: none;
 }
@@ -14,4 +18,25 @@
   font-size: 12px;
   line-height: 16px;
   color: @dark-gray;
+}
+
+@media (min-width: @tablet-width) {
+  .card {
+    min-width: 324px;
+  }
+
+  .card__title {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .card__row {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .card {
+    min-width: 245px;
+  }
 }
