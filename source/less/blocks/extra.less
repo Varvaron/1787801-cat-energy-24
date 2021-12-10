@@ -1,5 +1,5 @@
 .extra {
-  padding: 0 20px;
+  margin: 0;
 }
 
 .extra__title {
@@ -7,9 +7,11 @@
   line-height: 24px;
   font-weight: 400;
   grid-column: 1 / -1;
+  margin: 25px 20px 36px;
 }
 
 .extra__wrapper {
+  margin: 0 20px;
   display: grid;
   grid-template-columns: 1fr;
 }
@@ -54,7 +56,7 @@
 }
 
 .extra__offer-wrapper {
-  background: linear-gradient(to bottom, @extra-green 50%, @extra-green 50%), url("/img/mobile/catalog/special-offer.jpg");
+  background: linear-gradient(to bottom, @extra-green 50%, @extra-green 50%), url("../img/mobile/catalog/special-offer.jpg");
   background-repeat: no-repeat;
   width: 279px;
   height: 289px;
@@ -69,8 +71,12 @@
 
 
 @media (min-width: @tablet-width) {
+  .extra__wrapper {
+    margin: 0 30px;
+  }
+
   .extra__item {
-    min-width: 708px;
+    width: 708px;
   }
 
   .extra__link {

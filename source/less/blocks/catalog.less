@@ -1,5 +1,6 @@
 .catalog {
-  padding: 0 20px;
+  margin: 0 20px;
+  padding: 0;
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
@@ -41,6 +42,7 @@
   .catalog {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 60px;
+    margin: 0 30px;
   }
 
   .catalog__title {
@@ -56,12 +58,23 @@
     font-size: 16px;
     line-height: 18px;
   }
+
+  .catalog__show-all-button {
+    min-width: 245px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .catalog {
     grid-template-columns: repeat(4, 1fr);
+    grid-gap: 60px;
+    margin: 0 60px;
+  }
+}
+
+@media (min-width: @desktop-width-max) {
+  .catalog {
     grid-gap: 63px 80px;
-    padding: 0 110px;
+    margin: 0 110px;
   }
 }

@@ -1,10 +1,10 @@
 .programs {
-  margin: 0 20px 20px;
+  margin: 0;
 }
 
 .programs__list {
   padding: 0;
-  margin: 0;
+  margin: 0 20px;
   list-style: none;
 }
 
@@ -50,6 +50,10 @@
     margin: 0 30px;
   }
 
+  .programs__list {
+    margin: 0 30px;
+  }
+
   .programs__item {
     margin-bottom: 30px;
     min-width: 708px;
@@ -74,11 +78,12 @@
 
 @media (min-width: @desktop-width) {
   .programs {
-    margin: 0 110px;
+    margin: 0 60px;
   }
 
   .programs__list {
     display: flex;
+    margin: 0;
     flex-direction: row;
     justify-content: space-between;
   }
@@ -91,5 +96,11 @@
 
   .programs__item:not(:last-child) {
     margin-right: 80px;
+  }
+}
+
+@media (min-width: @desktop-width-max) {
+  .programs {
+    margin: 0 110px;
   }
 }

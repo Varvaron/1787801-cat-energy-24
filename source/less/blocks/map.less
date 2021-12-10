@@ -1,10 +1,12 @@
 .map {
   margin: 0;
   padding: 0;
+  width: 100%;
+  min-height: auto;
 }
 
 .map__canvas {
-  background: url("/img/mobile/map-mobile.png") no-repeat center center;
+  background: url("../img/mobile/map-mobile.png") no-repeat center center;
   background-size: cover;
   width: 100%;
   min-height: 320px;
@@ -12,13 +14,13 @@
 
 @media (min-width: @tablet-width) {
   .map__canvas {
-    background-image: url("/img/tablet/map-tablet.png");
+    background-image: url("../img/tablet/map-tablet.png");
     min-height: 400px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .map__canvas {
-    background-image: url("/img/desktop/map-desktop.png");
+    background-image: url("../img/desktop/map-desktop.png");
   }
 }
