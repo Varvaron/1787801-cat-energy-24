@@ -1,5 +1,9 @@
 .specials {
-  margin: 0 20px 50px;
+  margin: 0;
+}
+
+.specials__wrapper {
+  padding: 0 20px 50px;
 }
 
 .specials__title {
@@ -14,7 +18,7 @@
   padding: 0;
   list-style: none;
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: 1fr;
   grid-template-rows: repeat(4, 60px);
 }
 
@@ -41,10 +45,22 @@
 
 @media (min-width: @desktop-width) {
   .specials {
-    margin: 0 110px;
+    margin: 0 60px;
   }
 
   .specials__list {
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .specials {
+    margin: 0 60px;
+  }
+}
+
+@media (min-width: @desktop-width-max) {
+  .specials {
+    margin: 0 110px;
   }
 }

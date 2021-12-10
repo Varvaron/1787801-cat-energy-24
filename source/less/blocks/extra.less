@@ -1,0 +1,132 @@
+.extra {
+  margin: 0;
+}
+
+.extra__title {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+  grid-column: 1 / -1;
+  margin: 25px 20px 36px;
+}
+
+.extra__wrapper {
+  margin: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.extra__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.extra__item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.extra__subtitle {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: @extra-dark-gray;
+  grid-column: 1 / -1;
+}
+
+.extra__quantity {
+  font-size: 14px;
+  line-height: 14px;
+  color: @dark-gray;
+  grid-column: 1 / 2;
+}
+
+.extra__price {
+  font-size: 14px;
+  line-height: 14px;
+  color: @dark-gray;
+  grid-column: 2 / -1;
+  text-align: right;
+}
+
+.extra__link {
+  grid-column: 1 / -1;
+}
+
+.extra__offer-wrapper {
+  background: linear-gradient(to bottom, @extra-green 50%, @extra-green 50%), url("../img/mobile/catalog/special-offer.jpg");
+  background-repeat: no-repeat;
+  width: 279px;
+  height: 289px;
+}
+
+.extra__offer-text {
+  font-family: "Arial", "Helvetica", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: @basic-white;
+}
+
+
+@media (min-width: @tablet-width) {
+  .extra__wrapper {
+    margin: 0 30px;
+  }
+
+  .extra__item {
+    width: 708px;
+  }
+
+  .extra__link {
+    width: 708px;
+  }
+
+  .extra__subtitle {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .extra__quantity {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .extra__price {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .extra {
+    padding: 0 110px;
+  }
+
+  .extra__wrapper {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0 80px;
+  }
+
+  .extra__title {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .extra__list {
+    grid-column: 1 / 4;
+  }
+
+  .extra__item {
+    display: flex;
+    flex-direction: row;
+    align-content: baseline;
+    justify-content: space-between;
+  }
+
+  .extra__link {
+    width: 244px;
+    height: 40px;
+  }
+}
