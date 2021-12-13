@@ -15,7 +15,7 @@
       </a>
       <button class="header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
     </div>
-    <nav class="main-nav">
+    <nav class="main-nav main-nav--closed main-nav__no-js">
       <div class="main-nav__wrapper">
         <ul class="main-nav__list">
           <li class="main-nav__item">
@@ -248,28 +248,34 @@
       </div>
       <section class="map">
         <h2 class="visually-hidden">Наше местоположение</h2>
-        <div class="map__canvas"></div>
+        <div class="map__canvas">
+          <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002806!2d30.320858715677204!3d59.93871916905467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1639294471590!5m2!1sru!2sru" allowfullscreen="" loading="lazy" title="Офис компании по адресу ул. Большая Конюшенная, д. 19/8, Санкт-Петербург"></iframe>
+        </div>
       </section>
     </section>
     <footer class="footer">
       <div class="footer__wrapper">
         <a class="footer__logo" href="index.html">
-          <img src="img/mobile/logo.png" width="101" height="18" alt="Cat Energy.">
+          <img class="footer__logo-icon" src="../img/common/footer-logo.png" width="124" height="24" alt="Cat Energy.">
         </a>
         <ul class="footer__socials socials">
           <li class="socials__item">
-            <a class="socials__link socials__vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+            <a class="socials__link socials__vkontakte" href="https://vk.com/htmlacademy" title="Мы в Вконтакте"></a>
           </li>
           <li class="socials__item">
-            <a class="socials__link socials__instagram" href="https://www.instagram.com/htmlacademy">Мы в Instagram</a>
+            <a class="socials__link socials__instagram" href="https://www.instagram.com/htmlacademy" title="Мы в Instagram"></a>
           </li>
           <li class="socials__item">
-            <a class="socials__link socials__facebook" href="https://www.facebook.com/htmlacademy">Мы в Facebook</a>
+            <a class="socials__link socials__facebook" href="https://www.facebook.com/htmlacademy" title="Мы в Facebook"></a>
           </li>
         </ul>
-        <a class="copyright" href="https://htmlacademy.ru">HTML Academy</a>
+        <a class="copyright" href="https://htmlacademy.ru">
+          <span class="copyright__text">HTML Academy</span>
+          <img class="copyright__img" src="img/common/logo_html.png" width="27" height="34" alt="Логотип HTML Academy.">
+        </a>
       </div>
     </footer>
   </main>
+  <script src="js/mobile-nav.js" type="text/javascript"></script>
 </body>
 </html>
