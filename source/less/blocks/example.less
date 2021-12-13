@@ -8,11 +8,15 @@
   align-items: center;
 }
 
+.example__wrapper-text {
+  padding: 25px 0 40px;
+}
+
 .example__title {
   font-size: 36px;
   line-height: 40px;
   font-weight: 400;
-  margin: 0;
+  margin: 0 0 40px;
 }
 
 .example__text {
@@ -22,6 +26,7 @@
   font-size: 14px;
   line-height: 18px;
   color: @dark-gray;
+  margin: 0 0 20px;
 }
 
 .example__result {
@@ -29,41 +34,92 @@
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
+  margin: 0;
 }
 
 @media (min-width: @tablet-width) {
   .example {
-    background: linear-gradient(to bottom, @basic-white 70%, @light-gray 70%);
+    background-color: @basic-white;
     padding: 0 30px;
+    position: relative;
+    z-index: 2;
+
+    &::before {
+      position: absolute;
+      content: "";
+      background-color: @light-gray;
+      width: 100%;
+      height: 262px;
+      bottom: 0;
+      right: 0;
+      z-index: -1;
+    }
+  }
+
+  .example__wrapper-text {
+    padding: 43px 0 0;
   }
 
   .example__title {
     font-size: 60px;
     line-height: 60px;
-    padding-left: 30px;
   }
 
   .example__text {
     font-size: 16px;
     line-height: 24px;
-    padding-left: 30px;
+  }
+
+  .example__wrapper-stats {
+    display: flex;
+    justify-content: space-between;
   }
 
   .example__result {
     font-size: 20px;
     line-height: 20px;
+    width: 180px;
+    text-align: right;
   }
 }
+
 
 @media (min-width: @desktop-width) {
   .example {
     flex-direction: row;
     justify-content: space-between;
     background: linear-gradient(to bottom, @basic-white 25%, @light-gray 25%);
-    padding: 0 60px;
+    padding: 0 60px 75px;
   }
 
   .example__wrapper-text {
     width: 440px;
+  }
+
+  .example__text {
+    margin: 0 0 59px;
+  }
+
+  .example__wrapper-stats {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 55px 0;
+  }
+
+  .example__stats {
+    grid-column: 1 / -1;
+  }
+
+  .example__result {
+    width: 400px;
+    text-align: left;
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+}
+
+@media (min-width: @desktop-width-max) {
+  .example {
+    padding: 0 110px 75px;
   }
 }

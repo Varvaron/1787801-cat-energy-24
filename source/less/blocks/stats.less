@@ -1,7 +1,22 @@
+.stats {
+  margin: 0 auto 20px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  grid-gap: 0 32px;
+  min-width: 280px;
+  text-transform: uppercase;
+}
+
 .stats__number {
   font-size: 24px;
   line-height: 24px;
   color: @basic-black;
+  text-align: center;
+  margin: 0 0 8px;
+  padding: 0;
+  grid-row: 1 / 2;
 }
 
 .stats__description {
@@ -9,4 +24,22 @@
   font-size: 12px;
   line-height: 12px;
   color: @dark-gray;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  grid-row: 2 / -1;
+}
+
+
+@media (min-width: @tablet-width) {
+  .stats {
+    margin: 0;
+    grid-gap: 0 42px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .stats {
+    grid-template-columns: repeat(2, 162px);
+  }
 }
