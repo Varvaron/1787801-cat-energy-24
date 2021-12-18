@@ -1,40 +1,45 @@
 .form {
-  padding: 0 20px;
+  padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-content: flex-start;
+  border-top: 1px solid @decor-gray;
 }
 
 .form__title {
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
-  margin: 27px 0 37px;
+  margin: 27px 20px 37px;
 }
 
 .form__text {
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
-  margin: 0 0 39px;
+  margin: 0 20px 39px;
   width: 226px;
 }
 
 @media (min-width: @tablet-width) {
   .form {
-    padding: 0 37px 0 40px;
+    padding: 0;
+    margin: 0 70px;
+    border-top: none;
   }
 
   .form__title {
     font-size: 60px;
     line-height: 60px;
+    margin: 60px 0 54px;
   }
 
   .form__text {
     font-size: 20px;
     line-height: 30px;
     width: 323px;
+    margin: 0 0 66px;
   }
 }
 

@@ -36,43 +36,67 @@
       <h1 class="form__title">Подбор программы</h1>
       <p class="form__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
       <form class="ad-form" action="https://echo.htmlacademy.ru" method="post">
-        <fieldset class="ad-form__fieldset ad-form__cat">
-          <label class="ad-form__label" for="cat-name">Имя*</label>
-          <input class="ad-form__input" id="cat-name" name="cat-name" type="text" placeholder="Барсик">
-          <label class="ad-form__label" for="cat-weight">Вес(кг)*</label>
+        <fieldset class="ad-form__fieldset ad-form__fieldset--cat">
+          <div class="ad-form__wrapper">
+            <label class="ad-form__label" for="cat-name">Имя*</label>
+            <input class="ad-form__input" id="cat-name" name="cat-name" type="text" placeholder="Барсик">
+          </div>
+          <div class="ad-form__wrapper">
+            <label class="ad-form__label" for="cat-weight">Вес(кг)*</label>
           <input class="ad-form__input" id="cat-weight" name="cat-weight" type="text" placeholder="7">
-          <label class="ad-form__label" for="cat-age">Возраст (лет)</label>
+          </div>
+          <div class="ad-form__wrapper">
+            <label class="ad-form__label" for="cat-age">Возраст (лет)</label>
           <input class="ad-form__input" id="cat-age" name="cat-age" type="text" placeholder="7">
+          </div>
         </fieldset>
-        <fieldset class="ad-form__fieldset ad-form__program">
-          <input class="ad-form__radio" id="lost-weight" name="program" type="radio" value="lost-weight" checked>
+        <fieldset class="ad-form__fieldset ad-form__fieldset--program">
+          <div class="ad-form__wrapper">
+            <input class="ad-form__radio" id="lost-weight" name="program" type="radio" value="lost-weight" checked>
           <label for="lost-weight">Похудение</label>
-          <input class="ad-form__radio"  id="gain-weight" name="program" type="radio" value="gain-weight">
+          </div>
+          <div class="ad-form__wrapper">
+            <input class="ad-form__radio"  id="gain-weight" name="program" type="radio" value="gain-weight">
           <label for="gain-weight">Набор массы</label>
-          <input class="ad-form__radio"  id="need-advice" name="program" type="radio" value="need-advice">
-          <label for="need-advice">Не знаю (нужен ваш совет)</label>
+          </div>
+          <div class="ad-form__wrapper">
+            <input class="ad-form__radio"  id="need-advice" name="program" type="radio" value="need-advice">
+            <label for="need-advice">Не знаю (нужен ваш совет)</label>
+          </div>
         </fieldset>
-        <fieldset class="ad-form__fieldset ad-form__contacts">
-          <legend class="ad-form__legend">Контактные данные (владельца кота)</legend>
-          <label class="ad-form__label" for="email">E-mail*</label>
-          <input class="ad-form__input" id="email" name="email" type="email" placeholder="kuklachev@gmail.com">
-          <label class="ad-form__label" for="tel">Телефон*</label>
-          <input class="ad-form__input" id="tel" name="tel" type="tel" placeholder="8 (960) 900-60-90">
+        <fieldset class="ad-form__fieldset ad-form__fieldset--contacts">
+          <legend class="ad-form__legend ad-form__legend--contacts">Контактные данные (владельца кота)</legend>
+          <div class="ad-form__wrapper ad-form__wrapper--contacts">
+            <label class="ad-form__label" for="email">E-mail*</label>
+            <input class="ad-form__input" id="email" name="email" type="email" placeholder="kuklachev@gmail.com">
+          </div>
+          <div class="ad-form__wrapper ad-form__wrapper--contacts">
+            <label class="ad-form__label" for="tel">Телефон*</label>
+            <input class="ad-form__input" id="tel" name="tel" type="tel" placeholder="8 (960) 900-60-90">
+          </div>
         </fieldset>
-        <fieldset class="ad-form__fieldset ad-form__comment">
-          <legend class="ad-form__legend">Комментарий</legend>
+        <fieldset class="ad-form__fieldset ad-form__fieldset--comment">
+          <legend class="ad-form__legend ad-form__legend--comment">Комментарий</legend>
           <textarea class="ad-form__textarea" name="comment" id="comment" cols="30" rows="10">Расскажите обо всех повадках кота</textarea>
         </fieldset>
-        <fieldset class="ad-form__fieldset ad-form__extra">
-          <legend class="ad-form__legend">Дополнительно</legend>
-          <input class="ad-form__checkbox" type="checkbox" name="sweetener" id="sweetener" checked>
-          <label for="sweetener">Сахарозаменитель</label>
-          <input class="ad-form__checkbox" type="checkbox" name="water" id="water">
-          <label for="water">Питьевая вода</label>
-          <input class="ad-form__checkbox" type="checkbox" name="milk" id="milk">
-          <label for="milk">Молоко</label>
-          <input class="ad-form__checkbox" type="checkbox" name="vitamins" id="vitamins">
-          <label for="vitamins">Витамины</label>
+        <fieldset class="ad-form__fieldset ad-form__fieldset--extra">
+          <legend class="ad-form__legend ad-form__legend--extra">Дополнительно</legend>
+          <div class="ad-form__wrapper">
+            <input class="ad-form__checkbox" type="checkbox" name="sweetener" id="sweetener" checked>
+            <label class="ad-form__label ad-form__label--extra" for="sweetener">Сахарозаменитель</label>
+          </div>
+          <div class="ad-form__wrapper">
+            <input class="ad-form__checkbox" type="checkbox" name="water" id="water">
+            <label class="ad-form__label ad-form__label--extra" for="water">Питьевая вода</label>
+          </div>
+          <div class="ad-form__wrapper">
+            <input class="ad-form__checkbox" type="checkbox" name="milk" id="milk">
+            <label class="ad-form__label ad-form__label--extra" for="milk">Молоко</label>
+          </div>
+          <div class="ad-form__wrapper">
+            <input class="ad-form__checkbox" type="checkbox" name="vitamins" id="vitamins">
+            <label class="ad-form__label ad-form__label--extra" for="vitamins">Витамины</label>
+          </div>
           <button class="ad-form__button button" type="submit">Отправить заявку</button>
           <p class="ad-form__text">* — Обязательные поля</p>
         </fieldset>
