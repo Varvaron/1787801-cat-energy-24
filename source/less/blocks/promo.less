@@ -1,9 +1,16 @@
 .promo {
-  background: linear-gradient(to bottom, @extra-green 60%, @basic-white 60%), url("../img/mobile/promo-mobile.jpg") no-repeat;
+  background-image: linear-gradient(to bottom, @extra-green 60%, @basic-white 60%), url("../img/mobile/promo-mobile.jpg");
+  background-repeat: no-repeat;
   background-position: center top;
+  background-size: contain;
   margin: 0 0 20px;
   min-width: 320px;
+  height: auto;
   box-sizing: border-box;
+
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(to bottom, @extra-green 60%, @basic-white 60%), url("../img/mobile/promo-mobile@2x.jpg");
+  }
 }
 
 .promo::before {
@@ -46,6 +53,7 @@
 
 .promo__image {
   display: block;
+  padding: 0;
   margin: 0 auto 3px;
 }
 
@@ -64,8 +72,8 @@
   }
 
   .promo__wrapper {
-    margin: 0 30px;
-    padding: 62px 0 0 87px;
+    margin: 0 auto;
+    padding: 0;
     width: 708px;
     align-items: flex-start;
   }
@@ -76,7 +84,7 @@
     color: @basic-black;
     text-align: left;
     width: 415px;
-    margin: 0 0 41px;
+    margin: 62px 81px 41px;
   }
 
   .promo__text {
@@ -84,17 +92,20 @@
     line-height: 20px;
     color: @basic-black;
     text-align: left;
-    margin: 0 0 49px;
+    margin: 0 87px 49px;
     width: 285px;
   }
 
   .promo__image {
-    margin: 0 auto;
-    order: 2;
+    margin: 0 30px;
+    order: -1;
+    width: 709px;
+    height: 609px;
   }
 
   .promo__button {
     order: 1;
+    margin: 0 87px 0;
   }
 }
 
