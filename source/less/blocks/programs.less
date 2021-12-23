@@ -19,7 +19,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  //box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .programs__item:last-child {
@@ -42,7 +42,8 @@
 }
 
 .programs__title--slim::before {
-  background-image: url("../img/mobile/cat_slim.png");
+  background-image: url("../img/common/cat_slim.svg");
+  background-size: 50px 50px;
   top: 24px;
   left: 22px;
   height: 50px;
@@ -50,7 +51,8 @@
 }
 
 .programs__title--pro::before {
-  background-image: url("../img/mobile/cat_pro.png");
+  background-image: url("../img/common/cat_pro.svg");
+  background-size: 67px 50px;
   top: 24px;
   left: 13px;
   height: 50px;
@@ -85,6 +87,7 @@
   &::after {
     position: absolute;
     content: "";
+    background-repeat: no-repeat;
   }
 }
 
@@ -122,11 +125,13 @@
     &::after {
       position: absolute;
       content: "";
+      background-repeat: no-repeat;
     }
   }
 
   .programs__text--slim::after {
-    background-image: url("../img/tablet/cat_slim.png");
+    background-image: url("../img/common/cat_slim.svg");
+    background-size: 200px 211px;
     top: 81px;
     right: 61px;
     width: 200px;
@@ -134,7 +139,8 @@
   }
 
   .programs__text--pro::after {
-    background-image: url("../img/tablet/cat_pro.png");
+    background-image: url("../img/common/cat_pro.svg");
+    background-size: 268px 200px;
     top: 91px;
     right: 28px;
     width: 268px;
@@ -174,7 +180,8 @@
     margin: 0 0 73px 162px;
 
     &::before {
-      background-image: url("../img/desktop/cat_slim.png");
+      background-image: url("../img/common/cat_slim.svg");
+      background-size: 100px 106px;
       width: 100px;
       height: 106px;
       top: 41px;
@@ -186,7 +193,8 @@
     margin: 0 0 73px 181px;
 
     &::before {
-      background-image: url("../img/desktop/cat_pro.png");
+      background-image: url("../img/common/cat_pro.svg");
+      background-size: 134px 100px;
       width: 134px;
       height: 100px;
       top: 47px;

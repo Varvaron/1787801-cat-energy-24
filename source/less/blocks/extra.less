@@ -73,7 +73,10 @@
 }
 
 .extra__offer-wrapper {
-  background: linear-gradient(to bottom, @extra-green 50%, @extra-green 50%), url("../img/mobile/catalog/special-offer.jpg") no-repeat center center;
+  background-image: linear-gradient(to bottom, @extra-green 50%, @extra-green 50%), url("../img/mobile/catalog/special-offer.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% auto;
   width: 280px;
   height: 290px;
   margin: 0 auto;
@@ -83,10 +86,17 @@
   align-items: center;
   position: relative;
 
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(to bottom, @extra-green 50%, @extra-green 50%), url("../img/mobile/catalog/special-offer@2x.jpg");
+  }
+
   &::after {
     position: absolute;
     content: "";
-    background: url("../img/mobile/catalog/icon_gift.svg") no-repeat center center;
+    background-image: url("../img/common/icon_gift.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
     top: 58px;
     width: 78px;
     height: 80px;
@@ -160,16 +170,19 @@
   }
 
   .extra__offer-wrapper {
+    background-image: linear-gradient(to bottom, @extra-green 50%, @extra-green 50%), url("../img/tablet/catalog/special-offer.jpg");
     width: 708px;
     height: 200px;
-    background: linear-gradient(to bottom, @extra-green 50%, @extra-green 50%), url("../img/tablet/catalog/special-offer.jpg") no-repeat center center;
     flex-direction: row;
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(to bottom, @extra-green 50%, @extra-green 50%), url("../img/tablet/catalog/special-offer@2x.jpg");
+    }
 
     &::after {
       width: 80px;
       top: 57px;
       left: 77px;
-      background: url("../img/tablet/catalog/icon_gift.svg") no-repeat center center;
     }
   }
 
@@ -243,7 +256,11 @@
     flex-direction: column;
     width: 245px;
     height: 289px;
-    background: linear-gradient(to bottom, @extra-green 50%, @extra-green 50%), url("../img/desktop/catalog/special_offer.jpg") no-repeat center center;
+    background-image: linear-gradient(to bottom, @extra-green 50%, @extra-green 50%), url("../img/desktop/catalog/special-offer.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(to bottom, @extra-green 50%, @extra-green 50%), url("../img/desktop/catalog/special-offer@2x.jpg");
+    }
   }
 
   .extra__offer-text {
