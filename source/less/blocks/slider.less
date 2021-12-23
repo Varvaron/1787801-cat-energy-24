@@ -2,6 +2,10 @@
   display: block;
   margin: 0;
   padding: 0;
+
+  &--skinny {
+    display: none;
+  }
 }
 
 .slider__form {
@@ -14,4 +18,53 @@
   line-height: 20px;
   text-transform: uppercase;
   color: @basic-black;
+}
+
+
+@media (min-width: @tablet-width) {
+  .slider {
+    display: grid;
+    grid-template-columns: repeat(2, 291px);
+    grid-template-rows: 1fr;
+    padding: 0 0 55px;
+  }
+
+  .slider__wrapper {
+    grid-row: 1 / -1;
+
+    &--fat {
+      grid-column: 1 / 2;
+      width: 291px;
+      overflow: hidden;
+    }
+
+    &--skinny {
+      grid-column: 2 / -1;
+      width: 291px;
+      overflow: hidden;
+    }
+  }
+
+  .slider__img {
+    height: 520px;
+    margin: 0 auto;
+    object-fit: cover;
+
+    &--fat {
+      width: 677px;
+      object-position: -25px 0;
+    }
+
+    &--skinny {
+      width: 545px;
+      display: block;
+      object-position: -250px 0;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .slider {
+    padding: 0;
+  }
 }

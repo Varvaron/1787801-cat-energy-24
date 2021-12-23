@@ -14,8 +14,11 @@
   <header class="header">
     <div class="header__wrapper">
       <a class="header__logo" href="index.html">
-        <img class="header__logo-icon" src="img/mobile/logo-mobile.png" width="33" height="38" alt="Логотип магазина спортивного питания для кошек.">
-        <img src="img/mobile/logo.png" width="101" height="18" alt="Cat Energy.">
+        <picture>
+          <source media="(min-width: 1280px)" srcset="img/desktop/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/tablet/logo-tablet.svg">
+          <img class="header__logo-icon" src="img/mobile/logo-mobile.svg" width="191" height="38" alt="Логотип магазина спортивного питания для кошек Cat Energy.">
+        </picture>
       </a>
       <button class="header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
     </div>

@@ -25,6 +25,8 @@
 }
 
 .card__link-image {
+  width: 140px;
+  height: 112px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,6 +38,8 @@
   display: block;
   padding: 0;
   margin: auto;
+  width: 100%;
+  height: auto;
 }
 
 .card__table {
@@ -82,7 +86,7 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    background-color: @light-gray;
+    background-image: linear-gradient(to bottom, @basic-white 16%, @light-gray 16%);
   }
 
   .card__title {
@@ -95,6 +99,9 @@
 
   .card__link-image {
     order: -1;
+    align-items: flex-end;
+    width: 198px;
+    height: 200px;
   }
 
   .card__table {
@@ -124,6 +131,11 @@
   .card {
     min-width: 245px;
     max-width: 245px;
+  }
+
+  .card__link-image {
+    width: 172px;
+    height: 196px;
   }
 
   .card__table {
