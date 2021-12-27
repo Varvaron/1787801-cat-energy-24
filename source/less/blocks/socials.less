@@ -42,15 +42,31 @@
 .socials__svg {
   display: block;
   box-sizing: border-box;
+  fill: @svg-color;
 
-  &:hover {
-    stroke: @basic-green;
+  &--facebook {
+    fill: transparent;
+    stroke: @svg-color;
   }
+}
 
-  &:active {
-    stroke: @basic-green;
-    opacity: 0.3;
-  }
+.socials__link:hover .socials__svg {
+  fill: @basic-green;
+}
+
+.socials__link:hover .socials__svg--facebook {
+  fill: transparent;
+  stroke: @basic-green;
+}
+
+.socials__link:active .socials__svg {
+  fill: @basic-green;
+  opacity: 0.3;
+}
+
+.socials__link:active .socials__svg--facebook {
+  fill: transparent;
+  stroke: @basic-green;
 }
 
 @media (min-width: @tablet-width) {

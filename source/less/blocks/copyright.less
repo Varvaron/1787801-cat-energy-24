@@ -22,14 +22,16 @@
 }
 
 .copyright__svg {
-  &:hover {
-    stroke: @basic-green;
-  }
+  fill: @svg-color;
+}
 
-  &:active {
-    stroke: @basic-green;
-    opacity: 0.3;
-  }
+.copyright:hover .copyright__svg {
+  fill: @basic-green;
+}
+
+.copyright:active .copyright__svg {
+  fill: @basic-green;
+  opacity: 0.3;
 }
 
 @media (min-width: @tablet-width) {
