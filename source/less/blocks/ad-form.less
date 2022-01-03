@@ -32,18 +32,6 @@
     position: relative;
   }
 
-  &--contacts::after {
-    display: flex;
-    position: absolute;
-    content: "";
-    top: -69px;
-    right: 0;
-    min-width: 100px;
-    max-width: 500px;
-    height: 2px;
-    background-color: @basic-green;
-  }
-
   &--comment {
     margin: 23px 0 0;
     padding: 0 20px 23px;
@@ -83,6 +71,34 @@
   padding: 14px;
   margin: 0 0 0 10px;
   flex-grow: 2;
+
+  &--error {
+    border: 2px solid @error-red;
+  }
+
+  &--email {
+    background-image: url("../img/common/icon_email.svg");
+    background-repeat: no-repeat;
+    background-size: 20px 14px;
+    background-position: 95% center;
+  }
+
+  &--tel {
+    background-image: url("../img/common/icon_phone.svg");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: 97% center;
+  }
+
+  &:hover {
+    border: 1px solid @table-border-gray;
+  }
+
+  &:focus {
+    border-radius: 0;
+    border: 2px solid @dark-gray;
+    outline: none;
+  }
 }
 
 .ad-form__radio {
@@ -126,6 +142,16 @@
   padding: 10px 10px;
   height: 150px;
   resize: none;
+
+  &:hover {
+    border: 1px solid @table-border-gray;
+  }
+
+  &:focus {
+    border-radius: 0;
+    border: 2px solid @dark-gray;
+    outline: none;
+  }
 }
 
 .ad-form__button {
@@ -197,6 +223,11 @@
 
   .ad-form__input {
     height: 52px;
+
+    &--email {
+      background-size: 18px 13px;
+      background-position: 96% center;
+    }
   }
 
   .ad-form__textarea {
