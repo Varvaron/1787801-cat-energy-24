@@ -6,26 +6,6 @@
   grid-template-rows: repeat(2, auto);
   grid-gap: 0 32px;
   min-width: 280px;
-  position: relative;
-
-  &::before,
-  &::after {
-    position: absolute;
-    content: "";
-    top: 0;
-    background-image: url("../img/mobile/border-example.svg");
-    background-repeat: no-repeat;
-    width: 124px;
-    height: 56px;
-  }
-
-  &::before {
-    left: 0;
-  }
-
-  &::after {
-    right: 0;
-  }
 }
 
 .stats__number {
@@ -58,20 +38,6 @@
     margin: 0;
     grid-gap: 0 42px;
     width: 366px;
-
-    &::before,
-    &::after {
-      width: 162px;
-      height: 74px;
-    }
-
-    &::before {
-      background-image: url("../img/tablet/border-example.svg");
-    }
-
-    &::after {
-      background-image: url("../img/tablet/border-example1.svg");
-    }
   }
 
   .stats__number {

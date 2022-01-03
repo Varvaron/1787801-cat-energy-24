@@ -29,6 +29,19 @@
     margin: 26px 0 0;
     padding: 0 20px;
     grid-gap: 14px;
+    position: relative;
+  }
+
+  &--contacts::after {
+    display: flex;
+    position: absolute;
+    content: "";
+    top: -69px;
+    right: 0;
+    min-width: 100px;
+    max-width: 500px;
+    height: 2px;
+    background-color: @basic-green;
   }
 
   &--comment {
@@ -40,6 +53,7 @@
     padding: 0 20px 32px;
   }
 }
+
 
 .ad-form__wrapper {
   display: flex;
@@ -81,6 +95,7 @@
 }
 
 .ad-form__legend {
+  padding: 0;
   font-size: 24px;
   line-height: 26px;
   text-transform: none;

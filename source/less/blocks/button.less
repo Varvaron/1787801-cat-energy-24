@@ -9,9 +9,19 @@
   color: @basic-white;
   border: none;
   box-sizing: border-box;
+  padding: 0 20px;
   display: inline-block;
   height: 40px;
   cursor: pointer;
+
+  &:hover {
+    background-color: @hover-green;
+  }
+
+  &:active {
+    background-color: @hover-green;
+    color: @opacity-white;
+  }
 }
 
 @media (min-width: @tablet-width) {

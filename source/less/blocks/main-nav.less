@@ -1,6 +1,5 @@
 .main-nav {
   font-family: "Oswald Medium", "Roboto", sans-serif;
-  //font-weight: 500;
   font-size: 20px;
   line-height: 20px;
   text-transform: uppercase;
@@ -34,6 +33,14 @@
   color: @basic-black;
   cursor: pointer;
   display: inline-block;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (max-width: @mobile-width-only) {
@@ -64,7 +71,6 @@
 @media (min-width: @tablet-width) {
   .main-nav {
     font-family: "Oswald Regular", "Roboto", sans-serif;
-    //font-weight: 400;
     font-size: 18px;
     line-height: 24px;
     background-color: transparent;
