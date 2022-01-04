@@ -55,6 +55,49 @@
 
   &--extra {
     color: @basic-black;
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+  }
+
+  &--extra::before {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 0 15px 0 0;
+    border: 1px solid @table-border-gray;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 18px 14px;
+  }
+
+  &--extra:hover::before {
+    border: 1px solid @hover-input;
+  }
+
+  &--program {
+    color: @extra-dark-gray;
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+  }
+
+  &--program::before {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 0 16px 0 0;
+    border: 1px solid @table-border-gray;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 14px 14px;
+  }
+
+  &--program:hover::before {
+    border: 1px solid @hover-input;
   }
 }
 
@@ -101,14 +144,30 @@
   }
 }
 
-.ad-form__radio {
-  color: @extra-dark-gray;
-  margin: 0 15px 0 0;
+.ad-form__radio:checked + .ad-form__label--program::before {
+  background-image: url("../img/common/icon_radio.svg");
 }
 
-.ad-form__checkbox {
-  margin: 0 15px 0 0;
+.ad-form__radio:disabled + .ad-form__label--program {
+  opacity: 0.3;
 }
+
+.ad-form__radio:disabled + .ad-form__label--program::before {
+  opacity: 0.3;
+}
+
+.ad-form__checkbox:checked + .ad-form__label--extra::before {
+  background-image: url("../img/common/icon_checkbox.svg");
+}
+
+.ad-form__checkbox:disabled + .ad-form__label--extra {
+  opacity: 0.3;
+}
+
+.ad-form__checkbox:disabled + .ad-form__label--extra::before {
+  opacity: 0.3;
+}
+
 
 .ad-form__legend {
   padding: 0;
@@ -227,6 +286,22 @@
     &--email {
       background-size: 18px 13px;
       background-position: 96% center;
+    }
+  }
+
+  .ad-form__label {
+    &--extra::before {
+      width: 40px;
+      height: 40px;
+      margin: 0 19px 0 0;
+      background-size: 24px 18px;
+    }
+
+    &--program::before {
+      width: 40px;
+      height: 40px;
+      margin: 0 19px 0 0;
+      background-size: 18px 18px;
     }
   }
 
