@@ -29,7 +29,17 @@
     margin: 26px 0 0;
     padding: 0 20px;
     grid-gap: 14px;
+  }
+
+  &--contacts::before {
     position: relative;
+    content: "";
+    top: -70px;
+    z-index: -1;
+    right: -20px;
+    min-width: 100px;
+    height: 2px;
+    background-color: @basic-green;
   }
 
   &--comment {
@@ -37,17 +47,39 @@
     padding: 0 20px 23px;
   }
 
+  &--comment::before {
+    position: relative;
+    content: "";
+    top: -50px;
+    z-index: -1;
+    right: -20px;
+    min-width: 100px;
+    height: 2px;
+    background-color: @basic-green;
+  }
+
   &--extra {
     padding: 0 20px 32px;
   }
-}
 
+  &--extra::before {
+    position: relative;
+    content: "";
+    z-index: -1;
+    top: -45px;
+    right: -20px;
+    min-width: 100px;
+    height: 2px;
+    background-color: @basic-green;
+  }
+}
 
 .ad-form__wrapper {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  position: relative;
 }
 
 .ad-form__label {
@@ -121,20 +153,6 @@
     border: 2px solid @error-red;
   }
 
-  &--email {
-    background-image: url("../img/common/icon_email.svg");
-    background-repeat: no-repeat;
-    background-size: 20px 14px;
-    background-position: 95% center;
-  }
-
-  &--tel {
-    background-image: url("../img/common/icon_phone.svg");
-    background-repeat: no-repeat;
-    background-size: 20px 20px;
-    background-position: 97% center;
-  }
-
   &:hover {
     border: 1px solid @table-border-gray;
   }
@@ -143,6 +161,27 @@
     border-radius: 0;
     border: 2px solid @dark-gray;
     outline: none;
+  }
+}
+
+.ad-form__icon {
+  position: absolute;
+  top: 10px;
+  right: 11px;
+  mask-size: cover;
+  mask-repeat: no-repeat;
+  background-color: @extra-black;
+
+  &--email {
+    mask-image: url("../img/common/sprite.svg#icon-email");
+    width: 18px;
+    height: 14px;
+  }
+
+  &--tel {
+    mask-image: url("../img/common/sprite.svg#icon-tel");
+    width: 20px;
+    height: 20px;
   }
 }
 
@@ -170,23 +209,26 @@
   opacity: 0.3;
 }
 
-
 .ad-form__legend {
   padding: 0;
   font-size: 24px;
   line-height: 26px;
   text-transform: none;
+  background-color: @basic-white;
+  position: relative;
 
   &--contacts {
-    width: 190px;
+    width: 200px;
     margin: 0 0 35px;
   }
 
   &--comment {
+    width: 145px;
     margin: 0 0 38px;
   }
 
   &--extra {
+    width: 150px;
     margin: 0 0 34px;
   }
 }
@@ -253,8 +295,18 @@
       margin: 0 0 65px;
     }
 
+    &--contacts::before {
+      top: -90px;
+      right: -90px;
+    }
+
     &--comment {
       margin: 0 0 65px;
+    }
+
+    &--comment::before {
+      top: -90px;
+      right: -90px;
     }
 
     &--extra {
@@ -262,22 +314,40 @@
       grid-gap: 32px 60px;
       padding: 0 0 76px;
     }
+
+    &--extra::before {
+      top: -70px;
+      grid-column: 1 / -1;
+      right: -90px;
+    }
   }
 
   .ad-form__legend {
     font-size: 36px;
     line-height: 36px;
 
+    &::before {
+      position: absolute;
+      content: "";
+      width: 30px;
+      height: 2px;
+      background-color: @basic-green;
+      top: 23px;
+      left: -70px;
+    }
+
     &--contacts {
-      width: 512px;
+      min-width: 540px;
       margin: 0 0 76px;
     }
 
     &--comment {
+      width: 220px;
       margin: 0 0 76px;
     }
 
     &--extra {
+      width: 240px;
       margin: 0 0 57px;
     }
   }
@@ -337,7 +407,7 @@
       grid-column: 1 / 2;
     }
 
-    &--prorgam {
+    &--program {
       grid-column: 2 / -1;
     }
 
@@ -348,8 +418,17 @@
       margin: 0 0 69px;
     }
 
+    &--contacts::before {
+      grid-column: 1 / -1;
+      right: -110px;
+    }
+
     &--comment {
       grid-column: 1 / -1;
+    }
+
+    &--comment::before {
+      right: -110px;
     }
 
     &--extra {
@@ -358,6 +437,16 @@
       grid-template-rows: repeat(2, 1fr);
       grid-gap: 61px 80px;
     }
+
+    &--extra::before {
+      right: -110px;
+    }
+  }
+
+  .ad-form__legend::before {
+    width: 60px;
+    top: 23px;
+    left: -110px;
   }
 
   .ad-form__button {
