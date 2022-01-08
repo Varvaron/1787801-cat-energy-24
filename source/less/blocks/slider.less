@@ -127,7 +127,19 @@
       display: inline-block;
       width: 34px;
       height: 34px;
+      border-radius: 50%;
+      border: 1px solid @table-border-gray;
+      background-color: @basic-white;
       background-image: url("../img/common/slider_control.svg");
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: 8px 8px;
+      filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
+    }
+
+    &:active::after {
+      border: 1px solid @basic-green;
+      filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.2));
     }
   }
 
@@ -136,6 +148,14 @@
     line-height: 30px;
     padding: 0 0 1px;
     border-bottom: 1px dotted @opacity-black;
+
+    &:hover {
+      border-bottom: 1px solid @opacity-black;
+    }
+
+    &:active {
+      border-bottom: 1px solid @light-gray;
+    }
   }
 }
 
