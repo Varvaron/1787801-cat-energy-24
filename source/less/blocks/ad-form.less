@@ -138,7 +138,7 @@
 .ad-form__input {
   font-family: "Oswald Regular", "Roboto", sans-serif;
   font-size: 16px;
-  line-height: 18px;
+  line-height: 45px;
   text-transform: uppercase;
   color: @dark-gray;
   display: inline-block;
@@ -149,10 +149,6 @@
   margin: 0 0 0 10px;
   flex-grow: 2;
 
-  &--error {
-    border: 2px solid @error-red;
-  }
-
   &:hover {
     border: 1px solid @table-border-gray;
   }
@@ -162,27 +158,46 @@
     border: 2px solid @dark-gray;
     outline: none;
   }
+
+  &:invalid {
+    border: 2px solid @error-red;
+  }
 }
 
 .ad-form__icon {
   position: absolute;
-  top: 10px;
-  right: 11px;
-  mask-size: cover;
-  mask-repeat: no-repeat;
-  background-color: @extra-black;
+  top: 14px;
+
 
   &--email {
-    mask-image: url("../img/common/sprite.svg#icon-email");
-    width: 18px;
+    width: 19px;
     height: 14px;
+    right: 20px;
+    stroke: @extra-dark-gray;
   }
 
   &--tel {
-    mask-image: url("../img/common/sprite.svg#icon-tel");
     width: 20px;
     height: 20px;
+    right: 16px;
+    fill: @basic-black;
   }
+}
+
+.ad-form__input:focus + .ad-form__icon--email {
+  stroke: @basic-green;
+}
+
+.ad-form__input:focus + .ad-form__icon--tel {
+  fill: @basic-green;
+}
+
+.ad-form__input:invalid + .ad-form__icon--email {
+  stroke: @error-red;
+}
+
+.ad-form__input:invalid + .ad-form__icon--tel {
+  fill: @error-red;
 }
 
 .ad-form__radio:checked + .ad-form__label--program::before {
@@ -375,6 +390,10 @@
       margin: 0 19px 0 0;
       background-size: 18px 18px;
     }
+  }
+
+  .ad-form__icon {
+    top: 19px;
   }
 
   .ad-form__textarea {
