@@ -1,6 +1,6 @@
 .catalog {
   margin: 0;
-  border-top: 1px solid @catalog-border-gray;
+  border-top: 1px solid @catalog-gray;
 }
 
 .catalog__title {
@@ -21,8 +21,8 @@
   margin: 0;
   padding: 25px;
   box-sizing: border-box;
-  border-top: 1px solid @catalog-border-gray;
-  border-bottom: 1px solid @catalog-border-gray;
+  border-top: 1px solid @catalog-gray;
+  border-bottom: 1px solid @catalog-gray;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -68,6 +68,14 @@
   background-color: @light-gray;
   color: @dark-gray;
   width: 100%;
+
+  &:hover {
+    background-color: @catalog-gray;
+  }
+
+  &:active {
+    color: @opacity-gray;
+  }
 }
 
 @media (min-width: @tablet-width) {

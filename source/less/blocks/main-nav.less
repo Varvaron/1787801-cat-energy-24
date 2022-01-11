@@ -33,11 +33,20 @@
   color: @basic-black;
   cursor: pointer;
   display: inline-block;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (max-width: @mobile-width-only) {
   .main-nav {
     width: 100%;
+    z-index: 2;
   }
 
   .main-nav--closed {
@@ -62,6 +71,7 @@
 
 @media (min-width: @tablet-width) {
   .main-nav {
+    font-family: "Oswald Regular", "Roboto", sans-serif;
     font-size: 18px;
     line-height: 24px;
     background-color: transparent;
@@ -74,6 +84,7 @@
   }
 
   .main-nav__item {
+    position: relative;
     border: none;
     margin: 0;
     padding: 0;
@@ -84,7 +95,7 @@
   }
 
   .main-nav__link {
-    padding: 10px 0;
+    padding: 8px 0;
   }
 }
 

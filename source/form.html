@@ -32,7 +32,7 @@
             <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="form.html">Подбор программы</a>
+            <a class="main-nav__link active" href="form.html">Подбор программы</a>
           </li>
         </ul>
       </div>
@@ -59,16 +59,16 @@
         </fieldset>
         <fieldset class="ad-form__fieldset ad-form__fieldset--program">
           <div class="ad-form__wrapper">
-            <input class="ad-form__radio" id="lost-weight" name="program" type="radio" value="lost-weight" checked>
-          <label for="lost-weight">Похудение</label>
+            <input class="ad-form__radio visually-hidden" id="lost-weight" name="program" type="radio" value="lost-weight" checked>
+          <label class="ad-form__label ad-form__label--program" for="lost-weight">Похудение</label>
           </div>
           <div class="ad-form__wrapper">
-            <input class="ad-form__radio"  id="gain-weight" name="program" type="radio" value="gain-weight">
-          <label for="gain-weight">Набор массы</label>
+            <input class="ad-form__radio visually-hidden"  id="gain-weight" name="program" type="radio" value="gain-weight">
+          <label class="ad-form__label ad-form__label--program" for="gain-weight">Набор массы</label>
           </div>
           <div class="ad-form__wrapper">
-            <input class="ad-form__radio"  id="need-advice" name="program" type="radio" value="need-advice">
-            <label for="need-advice">Не знаю (нужен ваш совет)</label>
+            <input class="ad-form__radio visually-hidden"  id="need-advice" name="program" type="radio" value="need-advice">
+            <label class="ad-form__label ad-form__label--program" for="need-advice">Не знаю (нужен ваш совет)</label>
           </div>
         </fieldset>
         <fieldset class="ad-form__fieldset ad-form__fieldset--contacts">
@@ -76,10 +76,16 @@
           <div class="ad-form__wrapper ad-form__wrapper--contacts">
             <label class="ad-form__label" for="email">E-mail*</label>
             <input class="ad-form__input" id="email" name="email" type="email" placeholder="kuklachev@gmail.com">
+              <svg class="ad-form__icon ad-form__icon--email" width="18" height="14">
+                <use xlink:href="img/common/sprite.svg#icon-email"></use>
+              </svg>
           </div>
           <div class="ad-form__wrapper ad-form__wrapper--contacts">
             <label class="ad-form__label" for="tel">Телефон*</label>
             <input class="ad-form__input" id="tel" name="tel" type="tel" placeholder="8 (960) 900-60-90">
+              <svg class="ad-form__icon ad-form__icon--tel" width="20" height="20">
+                <use xlink:href="img/common/sprite.svg#icon-tel"></use>
+              </svg>
           </div>
         </fieldset>
         <fieldset class="ad-form__fieldset ad-form__fieldset--comment">
@@ -89,19 +95,19 @@
         <fieldset class="ad-form__fieldset ad-form__fieldset--extra">
           <legend class="ad-form__legend ad-form__legend--extra">Дополнительно</legend>
           <div class="ad-form__wrapper">
-            <input class="ad-form__checkbox" type="checkbox" name="sweetener" id="sweetener" checked>
+            <input class="ad-form__checkbox visually-hidden" type="checkbox" name="sweetener" id="sweetener" checked>
             <label class="ad-form__label ad-form__label--extra" for="sweetener">Сахарозаменитель</label>
           </div>
           <div class="ad-form__wrapper">
-            <input class="ad-form__checkbox" type="checkbox" name="water" id="water">
+            <input class="ad-form__checkbox visually-hidden" type="checkbox" name="water" id="water">
             <label class="ad-form__label ad-form__label--extra" for="water">Питьевая вода</label>
           </div>
           <div class="ad-form__wrapper">
-            <input class="ad-form__checkbox" type="checkbox" name="milk" id="milk">
+            <input class="ad-form__checkbox visually-hidden" type="checkbox" name="milk" id="milk">
             <label class="ad-form__label ad-form__label--extra" for="milk">Молоко</label>
           </div>
           <div class="ad-form__wrapper">
-            <input class="ad-form__checkbox" type="checkbox" name="vitamins" id="vitamins">
+            <input class="ad-form__checkbox visually-hidden" type="checkbox" name="vitamins" id="vitamins">
             <label class="ad-form__label ad-form__label--extra" for="vitamins">Витамины</label>
           </div>
           <button class="ad-form__button button" type="submit">Отправить заявку</button>
@@ -127,22 +133,36 @@
     <footer class="footer">
       <div class="footer__wrapper">
         <a class="footer__logo" href="index.html">
-          <img class="footer__logo-icon" src="img/common/footer-logo.svg" width="124" height="24" alt="Cat Energy.">
+          <img class="footer__logo-icon" src="img/common/footer-logo.svg" width="128" height="24" alt="Cat Energy.">
         </a>
         <ul class="footer__socials socials">
           <li class="socials__item">
-            <a class="socials__link socials__vkontakte" href="https://vk.com/htmlacademy"title="Мы в Вконтакте"></a>
+            <a class="socials__link socials__link--vkontakte" href="https://vk.com/htmlacademy"title="Мы в Вконтакте">
+              <svg class="socials__svg socials__svg--vkontakte" width="23" height="16">
+                <use xlink:href="img/common/sprite.svg#icon-vkontakte"></use>
+              </svg>
+            </a>
           </li>
           <li class="socials__item">
-            <a class="socials__link socials__instagram" href="https://www.instagram.com/htmlacademy" title="Мы в Instagram"></a>
+            <a class="socials__link socials__link--instagram" href="https://www.instagram.com/htmlacademy" title="Мы в Instagram">
+              <svg class="socials__svg socials__svg--instagram" width="16" height="16">
+                <use xlink:href="img/common/sprite.svg#icon-instagram"></use>
+              </svg>
+            </a>
           </li>
           <li class="socials__item">
-            <a class="socials__link socials__facebook" href="https://www.facebook.com/htmlacademy" title="Мы в Facebook"></a>
+            <a class="socials__link socials__link--facebook" href="https://www.facebook.com/htmlacademy" title="Мы в Facebook">
+              <svg class="socials__svg socials__svg--facebook" width="22" height="22">
+                <use xlink:href="img/common/sprite.svg#icon-facebook"></use>
+              </svg>
+            </a>
           </li>
         </ul>
         <a class="copyright" href="https://htmlacademy.ru">
           <span class="copyright__text">HTML Academy</span>
-          <img class="copyright__img" src="img/common/logo_html.svg" width="27" height="34" alt="Логотип HTML Academy.">
+          <svg class="copyright__svg" width="27" height="34">
+            <use xlink:href="img/common/sprite.svg#icon-htmlacademy"></use>
+          </svg>
         </a>
       </div>
     </footer>

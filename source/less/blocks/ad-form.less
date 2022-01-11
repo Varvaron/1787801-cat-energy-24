@@ -31,13 +31,46 @@
     grid-gap: 14px;
   }
 
+  &--contacts::before {
+    position: relative;
+    content: "";
+    top: -70px;
+    z-index: -1;
+    right: -20px;
+    min-width: 100px;
+    height: 2px;
+    background-color: @basic-green;
+  }
+
   &--comment {
     margin: 23px 0 0;
     padding: 0 20px 23px;
   }
 
+  &--comment::before {
+    position: relative;
+    content: "";
+    top: -50px;
+    z-index: -1;
+    right: -20px;
+    min-width: 100px;
+    height: 2px;
+    background-color: @basic-green;
+  }
+
   &--extra {
     padding: 0 20px 32px;
+  }
+
+  &--extra::before {
+    position: relative;
+    content: "";
+    z-index: -1;
+    top: -45px;
+    right: -20px;
+    min-width: 100px;
+    height: 2px;
+    background-color: @basic-green;
   }
 }
 
@@ -46,6 +79,7 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  position: relative;
 }
 
 .ad-form__label {
@@ -53,13 +87,58 @@
 
   &--extra {
     color: @basic-black;
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  &--extra::before {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 0 15px 0 0;
+    border: 1px solid @table-border-gray;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 18px 14px;
+  }
+
+  &--extra:hover::before {
+    border: 1px solid @hover-input;
+  }
+
+  &--program {
+    color: @extra-dark-gray;
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  &--program::before {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 0 16px 0 0;
+    border: 1px solid @table-border-gray;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 14px 14px;
+  }
+
+  &--program:hover::before {
+    border: 1px solid @hover-input;
   }
 }
 
 .ad-form__input {
   font-family: "Oswald Regular", "Roboto", sans-serif;
   font-size: 16px;
-  line-height: 18px;
+  line-height: 45px;
   text-transform: uppercase;
   color: @dark-gray;
   display: inline-block;
@@ -69,32 +148,102 @@
   padding: 14px;
   margin: 0 0 0 10px;
   flex-grow: 2;
+
+  &:hover {
+    border: 1px solid @table-border-gray;
+  }
+
+  &:focus {
+    border-radius: 0;
+    border: 2px solid @dark-gray;
+    outline: none;
+  }
+
+  &:invalid {
+    border: 2px solid @error-red;
+  }
 }
 
-.ad-form__radio {
-  color: @extra-dark-gray;
-  margin: 0 15px 0 0;
+.ad-form__icon {
+  position: absolute;
+  top: 14px;
+
+
+  &--email {
+    width: 19px;
+    height: 14px;
+    right: 20px;
+    stroke: @extra-dark-gray;
+  }
+
+  &--tel {
+    width: 20px;
+    height: 20px;
+    right: 16px;
+    fill: @basic-black;
+  }
 }
 
-.ad-form__checkbox {
-  margin: 0 15px 0 0;
+.ad-form__input:focus + .ad-form__icon--email {
+  stroke: @basic-green;
+}
+
+.ad-form__input:focus + .ad-form__icon--tel {
+  fill: @basic-green;
+}
+
+.ad-form__input:invalid + .ad-form__icon--email {
+  stroke: @error-red;
+}
+
+.ad-form__input:invalid + .ad-form__icon--tel {
+  fill: @error-red;
+}
+
+.ad-form__radio:checked + .ad-form__label--program::before {
+  background-image: url("../img/common/icon_radio.svg");
+}
+
+.ad-form__radio:disabled + .ad-form__label--program {
+  opacity: 0.3;
+}
+
+.ad-form__radio:disabled + .ad-form__label--program::before {
+  opacity: 0.3;
+}
+
+.ad-form__checkbox:checked + .ad-form__label--extra::before {
+  background-image: url("../img/common/icon_checkbox.svg");
+}
+
+.ad-form__checkbox:disabled + .ad-form__label--extra {
+  opacity: 0.3;
+}
+
+.ad-form__checkbox:disabled + .ad-form__label--extra::before {
+  opacity: 0.3;
 }
 
 .ad-form__legend {
+  padding: 0;
   font-size: 24px;
   line-height: 26px;
   text-transform: none;
+  background-color: @basic-white;
+  position: relative;
 
   &--contacts {
-    width: 190px;
+    width: 200px;
     margin: 0 0 35px;
   }
 
   &--comment {
+    width: 145px;
     margin: 0 0 38px;
   }
 
   &--extra {
+    width: 150px;
     margin: 0 0 34px;
   }
 }
@@ -111,6 +260,16 @@
   padding: 10px 10px;
   height: 150px;
   resize: none;
+
+  &:hover {
+    border: 1px solid @table-border-gray;
+  }
+
+  &:focus {
+    border-radius: 0;
+    border: 2px solid @dark-gray;
+    outline: none;
+  }
 }
 
 .ad-form__button {
@@ -151,8 +310,18 @@
       margin: 0 0 65px;
     }
 
+    &--contacts::before {
+      top: -90px;
+      right: -90px;
+    }
+
     &--comment {
       margin: 0 0 65px;
+    }
+
+    &--comment::before {
+      top: -90px;
+      right: -90px;
     }
 
     &--extra {
@@ -160,28 +329,71 @@
       grid-gap: 32px 60px;
       padding: 0 0 76px;
     }
+
+    &--extra::before {
+      top: -70px;
+      grid-column: 1 / -1;
+      right: -90px;
+    }
   }
 
   .ad-form__legend {
     font-size: 36px;
     line-height: 36px;
 
+    &::before {
+      position: absolute;
+      content: "";
+      width: 30px;
+      height: 2px;
+      background-color: @basic-green;
+      top: 23px;
+      left: -70px;
+    }
+
     &--contacts {
-      width: 512px;
+      min-width: 540px;
       margin: 0 0 76px;
     }
 
     &--comment {
+      width: 220px;
       margin: 0 0 76px;
     }
 
     &--extra {
+      width: 240px;
       margin: 0 0 57px;
     }
   }
 
   .ad-form__input {
     height: 52px;
+
+    &--email {
+      background-size: 18px 13px;
+      background-position: 96% center;
+    }
+  }
+
+  .ad-form__label {
+    &--extra::before {
+      width: 40px;
+      height: 40px;
+      margin: 0 19px 0 0;
+      background-size: 24px 18px;
+    }
+
+    &--program::before {
+      width: 40px;
+      height: 40px;
+      margin: 0 19px 0 0;
+      background-size: 18px 18px;
+    }
+  }
+
+  .ad-form__icon {
+    top: 19px;
   }
 
   .ad-form__textarea {
@@ -214,7 +426,7 @@
       grid-column: 1 / 2;
     }
 
-    &--prorgam {
+    &--program {
       grid-column: 2 / -1;
     }
 
@@ -225,8 +437,17 @@
       margin: 0 0 69px;
     }
 
+    &--contacts::before {
+      grid-column: 1 / -1;
+      right: -110px;
+    }
+
     &--comment {
       grid-column: 1 / -1;
+    }
+
+    &--comment::before {
+      right: -110px;
     }
 
     &--extra {
@@ -235,6 +456,16 @@
       grid-template-rows: repeat(2, 1fr);
       grid-gap: 61px 80px;
     }
+
+    &--extra::before {
+      right: -110px;
+    }
+  }
+
+  .ad-form__legend::before {
+    width: 60px;
+    top: 23px;
+    left: -110px;
   }
 
   .ad-form__button {

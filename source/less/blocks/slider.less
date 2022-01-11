@@ -1,6 +1,6 @@
 .slider__img {
   display: block;
-  margin: 0;
+  margin: 0 0 15px;
   padding: 0;
 
   &--skinny {
@@ -9,8 +9,45 @@
 }
 
 .slider__form {
-  width: 210px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+@media (max-width: @mobile-width-only) {
+  .slider__form {
+    width: 210px;
+    height: 30px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      cursor: pointer;
+      top: 8px;
+      left: 62px;
+      display: inline-block;
+      width: 86px;
+      height: 14px;
+      border: 1px solid @table-border-gray;
+      border-radius: 6px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      cursor: pointer;
+      top: 13px;
+      left: 68px;
+      display: inline-block;
+      width: 36px;
+      height: 6px;
+      background-color: @basic-green;
+      border-radius: 6px;
+    }
+  }
 }
 
 .slider__form-label {
@@ -18,6 +55,8 @@
   line-height: 20px;
   text-transform: uppercase;
   color: @basic-black;
+  width: 49px;
+  text-align: center;
 }
 
 
@@ -59,6 +98,63 @@
       width: 545px;
       display: block;
       object-position: -250px 0;
+    }
+  }
+
+  .slider__form {
+    width: 592px;
+    height: 40px;
+    margin: 25px auto 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 17px;
+      left: 83px;
+      display: inline-block;
+      width: 426px;
+      height: 6px;
+      background-color: @slider-gray;
+      border-radius: 6px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      cursor: pointer;
+      top: 3px;
+      left: 279px;
+      display: inline-block;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 1px solid @table-border-gray;
+      background-color: @basic-white;
+      background-image: url("../img/common/slider_control.svg");
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: 8px 8px;
+      filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
+    }
+
+    &:active::after {
+      border: 1px solid @basic-green;
+      filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.2));
+    }
+  }
+
+  .slider__form-label {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 0 0 1px;
+    border-bottom: 1px dotted @opacity-black;
+
+    &:hover {
+      border-bottom: 1px solid @opacity-black;
+    }
+
+    &:active {
+      border-bottom: 1px solid @light-gray;
     }
   }
 }

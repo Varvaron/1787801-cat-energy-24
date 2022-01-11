@@ -1,17 +1,30 @@
 .header {
   margin: 0;
   box-sizing: border-box;
+  min-height: 66px;
 }
 
 .header__wrapper {
   padding: 10px 20px 18px;
-  min-height: 38px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin: 0;
   position: relative;
+}
+
+.header__logo-icon {
+  display: block;
+  padding: 0;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 @media (max-width: @mobile-width-only) {

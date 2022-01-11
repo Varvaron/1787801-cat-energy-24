@@ -21,6 +21,19 @@
   align-self: center;
 }
 
+.copyright__svg {
+  fill: @svg-color;
+}
+
+.copyright:hover .copyright__svg {
+  fill: @basic-green;
+}
+
+.copyright:active .copyright__svg {
+  fill: @basic-green;
+  opacity: 0.3;
+}
+
 @media (min-width: @tablet-width) {
   .copyright {
     width: 163px;
