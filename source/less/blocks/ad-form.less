@@ -159,7 +159,7 @@
     outline: none;
   }
 
-  &:invalid {
+  &--error {
     border: 2px solid @error-red;
   }
 }
@@ -192,11 +192,11 @@
   fill: @basic-green;
 }
 
-.ad-form__input:invalid + .ad-form__icon--email {
+.ad-form__input--error + .ad-form__icon--email {
   stroke: @error-red;
 }
 
-.ad-form__input:invalid + .ad-form__icon--tel {
+.ad-form__input--error + .ad-form__icon--tel {
   fill: @error-red;
 }
 
