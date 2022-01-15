@@ -18,17 +18,18 @@
 }
 
 .extra__list {
-  margin: 0;
+  margin: 0 20px;
   padding: 0;
   list-style: none;
 }
 
 .extra__item {
-  padding: 0 20px 15px;
+  padding: 0 0 18px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   border-top: 1px solid @table-border-gray;
   box-sizing: border-box;
+  min-height: 130px;
 
   &:last-child {
     border-bottom: 1px solid @table-border-gray;
@@ -46,6 +47,7 @@
 }
 
 .extra__quantity {
+  font-family: "Arial", "Helvetica", sans-serif;
   font-size: 14px;
   line-height: 14px;
   color: @dark-gray;
@@ -54,8 +56,10 @@
 }
 
 .extra__price {
+  font-family: "Arial", "Helvetica", sans-serif;
   font-size: 14px;
   line-height: 14px;
+  text-transform: uppercase;
   color: @dark-gray;
   grid-column: 2 / -1;
   text-align: right;
@@ -110,7 +114,7 @@
   color: @basic-white;
   margin: 0 0 43px;
   text-align: center;
-  width: 160px;
+  width: 161px;
   justify-self: flex-end;
 }
 
