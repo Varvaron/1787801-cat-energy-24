@@ -6,6 +6,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+  box-sizing: border-box;
 }
 
 .contacts__wrapper--contrast {
@@ -19,6 +20,7 @@
   color: @extra-black;
   margin: 0;
   width: 140px;
+  font-weight: normal;
 }
 
 .contacts__text {
@@ -42,13 +44,14 @@
 
 @media (min-width: @tablet-width) {
   .contacts__wrapper {
-    padding: 60px 40px 56px;
+    padding: 56px 30px;
   }
 
   .contacts__title {
     width: 172px;
     font-size: 20px;
     line-height: 26px;
+    margin: 4px 0 0 40px;
   }
 
   .contacts__text {
@@ -56,6 +59,7 @@
     line-height: 20px;
     width: 160px;
     text-align: right;
+    margin: 0 40px 0 0;
   }
 
   .contacts__text-adress {
@@ -80,7 +84,12 @@
     background-color: @basic-white;
   }
 
+  .contacts__title {
+    margin: 0;
+  }
+
   .contacts__text {
     text-align: left;
+    margin: 0;
   }
 }

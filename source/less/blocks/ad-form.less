@@ -296,20 +296,22 @@
   .ad-form__fieldset {
     padding: 0;
     border: none;
-    grid-gap: 20px;
 
     &--cat {
       margin: 0 0 72px;
+      grid-gap: 20px;
     }
 
     &--program {
-      padding: 30px 27px 25px;
+      padding: 25px 27px 22px;
       border: 1px solid @border-gray;
-      margin: 0 0 71px;
+      margin: 0 0 74px;
+      grid-gap: 11px;
     }
 
     &--contacts {
-      margin: 0 0 65px;
+      margin: 0 0 45px;
+      grid-gap: 0;
     }
 
     &--contacts::before {
@@ -322,18 +324,18 @@
     }
 
     &--comment::before {
-      top: -90px;
+      top: -75px;
       right: -90px;
     }
 
     &--extra {
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 32px 60px;
-      padding: 0 0 76px;
+      padding: 0 0 72px;
     }
 
     &--extra::before {
-      top: -70px;
+      top: -38px;
       grid-column: 1 / -1;
       right: -90px;
     }
@@ -355,22 +357,29 @@
 
     &--contacts {
       min-width: 540px;
-      margin: 0 0 76px;
+      margin: 0 0 75px;
     }
 
     &--comment {
       width: 220px;
-      margin: 0 0 76px;
+      margin: 0 0 60px;
     }
 
     &--extra {
       width: 240px;
-      margin: 0 0 57px;
+      margin: 0 0 25px;
     }
+  }
+
+  .ad-form__wrapper--contacts {
+    margin: 0 0 20px;
   }
 
   .ad-form__input {
     height: 52px;
+    font-size: 20px;
+    margin: 0 0 0 19px;
+    padding: 14px 17px;
 
     &--email {
       background-size: 18px 13px;
@@ -407,12 +416,16 @@
 
   .ad-form__button {
     margin: 22px 0 0;
+    height: 52px;
+    line-height: 52px;
   }
 
   .ad-form__text {
-    margin: 22px 0 0;
+    margin: 18px 0 0;
     align-self: center;
     text-align: left;
+    font-size: 16px;
+    line-height: 16px;
   }
 }
 
@@ -420,23 +433,25 @@
   .ad-form {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, auto);
-    grid-gap: 0 80px;
+    grid-gap: 69px 80px;
   }
 
   .ad-form__fieldset {
     &--cat {
       grid-column: 1 / 2;
+      margin: 0;
     }
 
     &--program {
       grid-column: 2 / -1;
+      margin: 0;
     }
 
     &--contacts {
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 0 80px;
       grid-column: 1 / -1;
-      margin: 0 0 69px;
+      margin: 0;
     }
 
     &--contacts::before {
@@ -446,6 +461,7 @@
 
     &--comment {
       grid-column: 1 / -1;
+      margin: 0;
     }
 
     &--comment::before {
@@ -456,21 +472,39 @@
       grid-column: 1 / -1;
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: repeat(2, 1fr);
-      grid-gap: 61px 80px;
+      grid-gap: 0 80px;
+      margin: 0;
+      padding: 0 0 80px;
     }
 
     &--extra::before {
       right: -110px;
+      top: -30px;
     }
   }
 
-  .ad-form__legend::before {
-    width: 60px;
-    top: 23px;
-    left: -110px;
+  .ad-form__wrapper {
+    margin: 0;
+  }
+
+  .ad-form__legend {
+    &::before {
+      width: 60px;
+      top: 23px;
+      left: -110px;
+    }
+
+    &--extra {
+      margin: 0 0 15px;
+    }
   }
 
   .ad-form__button {
     grid-column: 1 / 3;
+    margin: 61px 0 0;
+  }
+
+  .ad-form__text {
+    margin: 60px 0 0;
   }
 }
