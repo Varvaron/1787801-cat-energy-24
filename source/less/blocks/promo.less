@@ -129,13 +129,14 @@
 
   .promo::before {
     top: -145px;
-    right: 0;
+    right: 0%;
     width: 50%;
     height: 696px;
     background-image: linear-gradient(to right, @extra-green 0%, @extra-green 0%), url("../img/desktop/promo-desktop.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center top;
+    background-position: left top;
+    overflow: hidden;
 
     @media (min-resolution: 2dppx) {
       background-image: linear-gradient(to right, @extra-green 0%, @extra-green 0%), url("../img/desktop/promo-desktop@2x.jpg");
@@ -172,6 +173,8 @@
 
 @media (min-width: @desktop-width-max) {
   .promo__wrapper {
-    margin: 0 110px;
+    margin: 0 auto;
+    min-width: 1220px;
+    max-width: 1220px;
   }
 }

@@ -201,6 +201,10 @@
   fill: @error-red;
 }
 
+.ad-form__radio:focus + .ad-form__label::before {
+  border: 1px solid @basic-green;
+}
+
 .ad-form__radio:checked + .ad-form__label--program::before {
   background-image: url("../img/common/icon_radio.svg");
 }
@@ -215,6 +219,10 @@
 
 .ad-form__checkbox:checked + .ad-form__label--extra::before {
   background-image: url("../img/common/icon_checkbox.svg");
+}
+
+.ad-form__checkbox:focus + .ad-form__label::before {
+  border: 1px solid @basic-green;
 }
 
 .ad-form__checkbox:disabled + .ad-form__label--extra {
