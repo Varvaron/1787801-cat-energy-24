@@ -13,16 +13,17 @@
 .programs__item {
   position: relative;
   background-color: @light-gray;
-  margin-bottom: 20px;
+  margin: 0 0 20px;
   padding: 0 20px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   box-sizing: border-box;
+  min-height: 266px;
 
   &:last-child {
-    margin-bottom: 0;
+    margin: 0;
   }
 }
 
@@ -33,7 +34,7 @@
   text-transform: uppercase;
   color: @basic-black;
   margin: 0;
-  padding: 30px 0 29px 91px;
+  padding: 30px 0 31px 71px;
 
   &::before {
     position: absolute;
@@ -67,7 +68,7 @@
   line-height: 18px;
   color: @dark-gray;
   margin: 0;
-  padding-bottom: 23px;
+  padding: 0 0 21px;
   border-bottom: 1px solid @decor-gray;
   min-width: 227px;
   grid-column: 1 / -1;
@@ -110,14 +111,15 @@
 
   .programs__item {
     margin-bottom: 30px;
-    padding: 77px 0 53px 53px;
+    padding: 77px 0 50px 53px;
+    min-height: 372px;
   }
 
   .programs__title {
     font-size: 36px;
     line-height: 36px;
     padding: 0;
-    margin: 0 0 24px;
+    margin: 0 0 26px;
 
     &::before {
       background-image: none;
@@ -130,7 +132,8 @@
     width: 340px;
     border-bottom: none;
     padding: 0;
-    margin: 0 0 38px;
+    margin: 0 0 40px;
+    color: @basic-black;
 
     &::after {
       position: absolute;
@@ -179,8 +182,9 @@
   }
 
   .programs__item {
-    padding: 77px 51px 45px;
+    padding: 77px 52px 40px;
     margin: 0;
+    min-height: 374px;
   }
 
   .programs__item:not(:last-child) {
@@ -188,7 +192,7 @@
   }
 
   .programs__title--slim {
-    margin: 0 0 73px 162px;
+    margin: 0 0 74px 162px;
 
     &::before {
       background-image: url("../img/common/cat_slim.svg");
@@ -201,7 +205,7 @@
   }
 
   .programs__title--pro {
-    margin: 0 0 73px 181px;
+    margin: 0 0 72px 162px;
 
     &::before {
       background-image: url("../img/common/cat_pro.svg");
@@ -215,6 +219,7 @@
 
   .programs__text {
     min-width: 467px;
+    margin: 0 0 17px;
 
     &::after {
       background-image: none;
@@ -224,7 +229,8 @@
 
 @media (min-width: @desktop-width-max) {
   .programs {
-    margin: 0 110px;
+    margin: 0 auto;
+    max-width: 1220px;
   }
 
   .programs__item:not(:last-child) {

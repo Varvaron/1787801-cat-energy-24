@@ -1,5 +1,5 @@
 .promo {
-  background-image: linear-gradient(to bottom, @extra-green 60%, @basic-white 60%), url("../img/mobile/promo-mobile.jpg");
+  background-image: linear-gradient(to bottom, @extra-green 63%, @basic-white 63%), url("../img/mobile/promo-mobile.jpg");
   background-repeat: no-repeat;
   background-position: center top;
   background-size: contain;
@@ -59,11 +59,12 @@
 
 .promo__button {
   min-width: 280px;
+  font-size: 14px;
 }
 
 @media (min-width: @tablet-width) {
   .promo {
-    margin: 0;
+    margin: 0 auto 3px;
     background: none;
     position: relative;
   }
@@ -86,7 +87,7 @@
     color: @basic-black;
     text-align: left;
     width: 415px;
-    margin: 62px 81px 41px;
+    margin: 64px 88px 41px;
     order: -4;
   }
 
@@ -95,7 +96,7 @@
     line-height: 20px;
     color: @basic-black;
     text-align: left;
-    margin: 0 87px 49px;
+    margin: 0 90px 49px;
     width: 285px;
     order: -3;
   }
@@ -106,31 +107,36 @@
     height: 609px;
     z-index: -5;
     position: relative;
-    top: -80px;
+    top: -82px;
   }
 
   .promo__button {
     order: -2;
-    margin: 0 87px 0;
+    margin: 0 90px 0;
+    font-size: 20px;
+    min-width: 244px;
+    height: 54px;
+    line-height: 54px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .promo {
     padding: 0;
-    margin: 0 0 82px;
+    margin: 30px 0 97px;
     height: 535px;
   }
 
   .promo::before {
-    top: -163px;
-    right: 0;
-    width: 720px;
+    top: -145px;
+    right: 0%;
+    width: 50%;
     height: 696px;
     background-image: linear-gradient(to right, @extra-green 0%, @extra-green 0%), url("../img/desktop/promo-desktop.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center top;
+    background-position: left top;
+    overflow: hidden;
 
     @media (min-resolution: 2dppx) {
       background-image: linear-gradient(to right, @extra-green 0%, @extra-green 0%), url("../img/desktop/promo-desktop@2x.jpg");
@@ -145,7 +151,7 @@
   }
 
   .promo__title {
-    margin: 82px 0 40px 80px;
+    margin: 80px 0 40px 80px;
   }
 
   .promo__text {
@@ -160,13 +166,15 @@
     margin: 0;
     width: 552px;
     height: 499px;
-    top: 0;
-    left: -65px;
+    top: -2px;
+    left: -47px;
   }
 }
 
 @media (min-width: @desktop-width-max) {
   .promo__wrapper {
-    margin: 0 110px;
+    margin: 0 auto;
+    min-width: 1220px;
+    max-width: 1220px;
   }
 }

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple.png">
@@ -32,7 +32,7 @@
             <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link active" href="form.html">Подбор программы</a>
+            <a class="main-nav__link active" href="#">Подбор программы</a>
           </li>
         </ul>
       </div>
@@ -46,11 +46,11 @@
         <fieldset class="ad-form__fieldset ad-form__fieldset--cat">
           <div class="ad-form__wrapper">
             <label class="ad-form__label" for="cat-name">Имя*</label>
-            <input class="ad-form__input" id="cat-name" name="cat-name" type="text" placeholder="Барсик">
+            <input class="ad-form__input" id="cat-name" name="cat-name" type="text" placeholder="Барсик" required>
           </div>
           <div class="ad-form__wrapper">
-            <label class="ad-form__label" for="cat-weight">Вес(кг)*</label>
-          <input class="ad-form__input" id="cat-weight" name="cat-weight" type="text" placeholder="7">
+            <label class="ad-form__label" for="cat-weight">Вес (кг)*</label>
+          <input class="ad-form__input" id="cat-weight" name="cat-weight" type="text" placeholder="7" required>
           </div>
           <div class="ad-form__wrapper">
             <label class="ad-form__label" for="cat-age">Возраст (лет)</label>
@@ -75,16 +75,16 @@
           <legend class="ad-form__legend ad-form__legend--contacts">Контактные данные (владельца кота)</legend>
           <div class="ad-form__wrapper ad-form__wrapper--contacts">
             <label class="ad-form__label" for="email">E-mail*</label>
-            <input class="ad-form__input" id="email" name="email" type="email" placeholder="kuklachev@gmail.com">
+            <input class="ad-form__input" id="email" name="email" type="email" placeholder="kuklachev@gmail.com" required>
               <svg class="ad-form__icon ad-form__icon--email" width="18" height="14">
-                <use xlink:href="img/common/sprite.svg#icon-email"></use>
+                <use xlink:href="img/sprite.svg#icon-email"></use>
               </svg>
           </div>
           <div class="ad-form__wrapper ad-form__wrapper--contacts">
             <label class="ad-form__label" for="tel">Телефон*</label>
-            <input class="ad-form__input" id="tel" name="tel" type="tel" placeholder="8 (960) 900-60-90">
+            <input class="ad-form__input" id="tel" name="tel" type="tel" placeholder="8 (960) 900-60-90" required>
               <svg class="ad-form__icon ad-form__icon--tel" width="20" height="20">
-                <use xlink:href="img/common/sprite.svg#icon-tel"></use>
+                <use xlink:href="img/sprite.svg#icon-tel"></use>
               </svg>
           </div>
         </fieldset>
@@ -117,7 +117,7 @@
     </section>
     <section class="contacts">
       <div class="contacts__wrapper contacts__wrapper--contrast">
-        <h2 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h2>
+        <h2 class="contacts__title">Приглашаем<br>к сотрудничеству дилеров!</h2>
         <div class="contacts__text">
           <p class="contacts__text-adress">ул. Большая Конюшенная, д. 19/8</p>
           <p class="contacts__text-city">Санкт-Петербург</p>
@@ -125,8 +125,8 @@
       </div>
       <section class="map">
         <h2 class="visually-hidden">Наше местоположение</h2>
-        <div class="map__canvas">
-          <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002806!2d30.320858715677204!3d59.93871916905467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1639294471590!5m2!1sru!2sru" allowfullscreen="" loading="lazy" title="Офис компании по адресу ул. Большая Конюшенная, д. 19/8, Санкт-Петербург"></iframe>
+        <div class="map__canvas map__canvas--form">
+          <iframe class="map__iframe map__iframe--form" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002806!2d30.320858715677204!3d59.93871916905467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1639294471590!5m2!1sru!2sru" allowfullscreen="" loading="lazy" title="Офис компании по адресу ул. Большая Конюшенная, д. 19/8, Санкт-Петербург"></iframe>
         </div>
       </section>
     </section>
@@ -139,21 +139,21 @@
           <li class="socials__item">
             <a class="socials__link socials__link--vkontakte" href="https://vk.com/htmlacademy"title="Мы в Вконтакте">
               <svg class="socials__svg socials__svg--vkontakte" width="23" height="16">
-                <use xlink:href="img/common/sprite.svg#icon-vkontakte"></use>
+                <use xlink:href="img/sprite.svg#icon-vkontakte"></use>
               </svg>
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link socials__link--instagram" href="https://www.instagram.com/htmlacademy" title="Мы в Instagram">
               <svg class="socials__svg socials__svg--instagram" width="16" height="16">
-                <use xlink:href="img/common/sprite.svg#icon-instagram"></use>
+                <use xlink:href="img/sprite.svg#icon-instagram"></use>
               </svg>
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link socials__link--facebook" href="https://www.facebook.com/htmlacademy" title="Мы в Facebook">
               <svg class="socials__svg socials__svg--facebook" width="22" height="22">
-                <use xlink:href="img/common/sprite.svg#icon-facebook"></use>
+                <use xlink:href="img/sprite.svg#icon-facebook"></use>
               </svg>
             </a>
           </li>
@@ -161,7 +161,7 @@
         <a class="copyright" href="https://htmlacademy.ru">
           <span class="copyright__text">HTML Academy</span>
           <svg class="copyright__svg" width="27" height="34">
-            <use xlink:href="img/common/sprite.svg#icon-htmlacademy"></use>
+            <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
           </svg>
         </a>
       </div>

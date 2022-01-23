@@ -8,12 +8,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-@media (max-width: @desktop-width) {
+@media (max-width: @desktop-width-max) {
   .page {
     overflow-x: hidden;
   }
 
   .page__body {
     overflow-x: hidden;
+  }
+}
+
+@media (min-width: @desktop-width-max) {
+  .page {
+    margin: 0 auto;
   }
 }

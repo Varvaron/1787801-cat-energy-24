@@ -37,11 +37,12 @@
     flex-direction: row;
     justify-content: space-between;
     align-content: center;
-    padding: 55px 30px;
+    box-sizing: border-box;
+    padding: 60px 30px;
   }
 
   .footer__logo {
-    margin: 0;
+    margin: 0 20px 0 0;
   }
 
   .footer__logo-icon {
@@ -52,16 +53,17 @@
 @media (min-width: @desktop-width) {
   .footer {
     min-height: 149px;
-    padding: 0 60px;
   }
 
   .footer__wrapper {
     padding: 57px 0;
+    margin: 0 60px;
   }
 }
 
 @media (min-width: @desktop-width-max) {
-  .footer {
-    padding: 0 110px;
+  .footer__wrapper {
+    max-width: 1220px;
+    margin: 0 auto;
   }
 }
