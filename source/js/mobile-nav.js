@@ -1,7 +1,7 @@
 const mainNav = document.querySelector('.main-nav');
 const toggle = document.querySelector('.header__toggle');
 
-mainNav.classList.remove('main-nav__no-js');
+mainNav.classList.remove('main-nav--no-js');
 toggle.classList.add('header__toggle--closed');
 
 toggle.addEventListener('click', () => {

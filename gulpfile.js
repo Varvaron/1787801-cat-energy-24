@@ -11,6 +11,7 @@ import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
 import del from 'del';
+import jsmin from 'gulp-jsmin';
 
 // Styles
 
@@ -39,6 +40,7 @@ const html = () => {
 
 const scripts = () => {
   return gulp.src('source/js/*.js')
+    .pipe(jsmin())
     .pipe(gulp.dest('build/js'))
     .pipe(browser.stream());
 }

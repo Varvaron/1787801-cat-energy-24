@@ -11,9 +11,9 @@
     <title>HTML Academy: Кэт энерджи</title>
   </head>
   <body class="page__body">
-    <header class="header">
+    <header class="page__header header">
       <div class="header__wrapper">
-        <a class="header__logo" href="#">
+        <a class="header__logo">
           <picture>
             <source media="(min-width: 1280px)" srcset="img/desktop/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/tablet/logo-tablet.svg">
@@ -22,10 +22,10 @@
         </a>
         <button class="header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       </div>
-      <nav class="main-nav main-nav--closed main-nav__no-js">
+      <nav class="main-nav main-nav--closed main-nav--no-js">
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--contrast active active--contrast" href="#">Главная</a>
+            <a class="main-nav__link main-nav__link--contrast active active--contrast">Главная</a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link main-nav__link--contrast" href="catalog.html">Каталог продукции</a>
@@ -39,8 +39,10 @@
     <main class="page__main">
       <section class="promo">
         <div class="promo__wrapper">
-          <h1 class="promo__title">Функциональное питание для котов</h1>
-          <p class="promo__text">Занялся собой? Займись котом!</p>
+          <div class="promo__wrapper-text">
+            <h1 class="promo__title">Функциональное питание для котов</h1>
+            <p class="promo__text">Занялся собой? Займись котом!</p>
+          </div>
           <picture>
             <source type="image/webp" media="(min-width: 1280px)" srcset="img/desktop/index-can.webp 1x, img/desktop/index-can@2x.webp 2x">
             <source type="image/webp" media="(min-width: 768px)" srcset="img/tablet/index-can-tablet.webp 1x, img/tablet/index-can-tablet@2x.webp 2x">
@@ -110,15 +112,15 @@
               <source type="image/webp" media="(min-width: 768px)" srcset="img/tablet/cat-fat.webp 1x, img/tablet/cat-fat@2x.webp 2x">
               <source type="image/webp" srcset="img/mobile/cat-fat.webp 1x, img/mobile/cat-fat@2x.webp 2x">
               <source media="(min-width: 768px)" srcset="img/tablet/cat-fat.png 1x, img/tablet/cat-fat.png 2x">
-              <img class="slider__img slider__img--fat" src="img/mobile/cat-fat.png" srcset="img/mobile/cat-fat@2x.png 2x" width="280" height="232" alt="Кот Борис до похудения.">
+              <img class="slider__img slider__img--fat" src="img/mobile/cat-fat.png" srcset="img/mobile/cat-fat@2x.png 2x" width="280" height="232" loading="lazy" alt="Кот Борис до похудения.">
             </picture>
           </div>
           <div class="slider__wrapper slider__wrapper--skinny">
             <picture>
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/tablet/cat-skinny.png 1x, img/tablet/cat-skinny@2x.png 2x">
-              <source type="image/webp" srcset="img/mobile/cat-skinny.png 1x, img/mobile/cat-skinny@2x.png 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/tablet/cat-skinny.webp 1x, img/tablet/cat-skinny@2x.webp 2x">
+              <source type="image/webp" srcset="img/mobile/cat-skinny.webp 1x, img/mobile/cat-skinny@2x.webp 2x">
               <source media="(min-width: 768px)" srcset="img/tablet/cat-skinny.png 1x, img/tablet/cat-skinny.png 2x">
-              <img class="slider__img slider__img--skinny" src="img/mobile/cat-skinny.png" srcset="img/mobile/cat-skinny@2x.png 2x" width="243" height="232" alt="Кот Борис до похудения.">
+              <img class="slider__img slider__img--skinny" src="img/mobile/cat-skinny.png" srcset="img/mobile/cat-skinny@2x.png 2x" width="243" height="232" loading="lazy" alt="Кот Борис до похудения.">
             </picture>
           </div>
           <form action="/" class="slider__form">
@@ -144,43 +146,43 @@
           </div>
         </section>
       </section>
-      <footer class="footer">
-        <div class="footer__wrapper">
-          <a class="footer__logo" href="#">
-            <img class="footer__logo-icon" src="img/common/footer-logo.svg" width="128" height="24" alt="Cat Energy.">
-          </a>
-          <ul class="footer__socials socials">
-            <li class="socials__item">
-              <a class="socials__link socials__link--vkontakte" href="https://vk.com/htmlacademy" title="Мы в Вконтакте">
-                <svg class="socials__svg socials__svg--vkontakte" width="23" height="16">
-                  <use xlink:href="img/sprite.svg#icon-vkontakte"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="socials__item">
-              <a class="socials__link socials__link--instagram" href="https://www.instagram.com/htmlacademy" title="Мы в Instagram">
-                <svg class="socials__svg socials__svg--instagram" width="16" height="16">
-                  <use xlink:href="img/sprite.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="socials__item">
-              <a class="socials__link socials__link--facebook" href="https://www.facebook.com/htmlacademy" title="Мы в Facebook">
-                <svg class="socials__svg socials__svg--facebook" width="22" height="22">
-                  <use xlink:href="img/sprite.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-          <a class="copyright" href="https://htmlacademy.ru">
-            <span class="copyright__text">HTML Academy</span>
-            <svg class="copyright__svg" width="27" height="34">
-              <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
-            </svg>
-          </a>
-        </div>
-      </footer>
     </main>
-    <script src="js/mobile-nav.js" type="text/javascript"></script>
+    <footer class="page__footer footer">
+      <div class="footer__wrapper">
+        <a class="footer__logo">
+          <img class="footer__logo-icon" src="img/common/footer-logo.svg" width="128" height="24" alt="Cat Energy.">
+        </a>
+        <ul class="footer__socials socials">
+          <li class="socials__item">
+            <a class="socials__link socials__link--vkontakte" href="https://vk.com/htmlacademy" title="Мы в Вконтакте">
+              <svg class="socials__svg socials__svg--vkontakte" width="23" height="16">
+                <use xlink:href="img/sprite.svg#icon-vkontakte"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link socials__link--instagram" href="https://www.instagram.com/htmlacademy" title="Мы в Instagram">
+              <svg class="socials__svg socials__svg--instagram" width="16" height="16">
+                <use xlink:href="img/sprite.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link socials__link--facebook" href="https://www.facebook.com/htmlacademy" title="Мы в Facebook">
+              <svg class="socials__svg socials__svg--facebook" width="22" height="22">
+                <use xlink:href="img/sprite.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <a class="copyright" href="https://htmlacademy.ru">
+          <span class="copyright__text">HTML Academy</span>
+          <svg class="copyright__svg" width="27" height="34">
+            <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
+          </svg>
+        </a>
+      </div>
+    </footer>
+    <script src="js/mobile-nav.js"></script>
   </body>
 </html>
