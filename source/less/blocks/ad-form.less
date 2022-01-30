@@ -43,14 +43,14 @@
   }
 
   &--comment {
-    margin: 23px 0 0;
+    margin: 11px 0 0;
     padding: 0 20px 23px;
   }
 
   &--comment::before {
     position: relative;
     content: "";
-    top: -35px;
+    top: 28px;
     z-index: -1;
     right: -20px;
     min-width: 100px;
@@ -85,9 +85,36 @@
 .ad-form__label {
   color: @dark-gray;
 
+  &--program {
+    color: @extra-dark-gray;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  &--program::before {
+    content: "";
+    display: flex;
+    width: 30px;
+    height: 30px;
+    margin: 0 15px 0 0;
+    border: 1px solid @table-border-gray;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 14px 14px;
+  }
+
+  &--program:hover::before {
+    border: 1px solid @hover-input;
+  }
+
   &--extra {
     color: @basic-black;
-    display: inline-flex;
+    display: grid;
+    grid-template-columns: auto 1fr;
     align-items: center;
     user-select: none;
     cursor: pointer;
@@ -107,31 +134,6 @@
   }
 
   &--extra:hover::before {
-    border: 1px solid @hover-input;
-  }
-
-  &--program {
-    color: @extra-dark-gray;
-    display: inline-flex;
-    align-items: center;
-    user-select: none;
-    cursor: pointer;
-  }
-
-  &--program::before {
-    content: "";
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    margin: 0 15px 0 0;
-    border: 1px solid @table-border-gray;
-    border-radius: 50%;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 14px 14px;
-  }
-
-  &--program:hover::before {
     border: 1px solid @hover-input;
   }
 }
@@ -318,7 +320,7 @@
     }
 
     &--contacts {
-      margin: 0 0 45px;
+      margin: 0 0 32px;
       grid-gap: 0;
     }
 
@@ -332,7 +334,7 @@
     }
 
     &--comment::before {
-      top: -75px;
+      top: 35px;
       right: -90px;
     }
 
@@ -470,16 +472,18 @@
     &--comment {
       grid-column: 1 / -1;
       margin: 0;
+      grid-gap: 0;
     }
 
     &--comment::before {
+      top: 25px;
       right: -110px;
     }
 
     &--extra {
       grid-column: 1 / -1;
       grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(2, 1fr);
+      grid-template-rows: auto;
       grid-gap: 0 80px;
       margin: 0;
       padding: 0 0 80px;
@@ -487,7 +491,7 @@
 
     &--extra::before {
       right: -110px;
-      top: -30px;
+      top: -70px;
     }
   }
 
@@ -502,8 +506,12 @@
       left: -110px;
     }
 
+    &--comment {
+      margin: 0 0 70px;
+    }
+
     &--extra {
-      margin: 0 0 15px;
+      margin: 0 0 57px;
     }
   }
 
