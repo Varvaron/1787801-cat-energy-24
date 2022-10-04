@@ -1,4 +1,5 @@
 # Личный проект «Кэт энерджи»
+Ссылка на проект: https://1787801-cat-energy-24-af14csl09-varvaron.vercel.app/
 
 * Студент: [Варвара Кучевасова](https://up.htmlacademy.ru/adaptive/24/user/1787801).
 * Наставник: `Ирина Малиновская`.
